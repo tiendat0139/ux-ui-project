@@ -1,0 +1,45 @@
+@import "normalize.css";
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+
+:root{
+  --primary: #2749bc;
+  --blue: #54b7d3;
+  --yellow: #FFCC00;
+  --red: #E03B24;
+  --green: #64A338;
+  --blue-grey: #F4F6F8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;  // 1rem = 10px
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  text-rendering: optimizespeed;
+  color: var(--text-color);
+  overflow-y: overlay;
+}
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,0.2);
+  border-radius: 8px; 
+  &:hover{
+    background-color: rgba(0,0,0,0.3);
+  }
+}

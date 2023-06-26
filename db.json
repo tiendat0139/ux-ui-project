@@ -1,0 +1,609 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Nguyen Tien Dat",
+      "email": "tiendat@gmail.com",
+      "password": "123456",
+      "job": "Student",
+      "avatar": "/assets/1.png"
+    },
+    {
+      "id": 2,
+      "name": "Nguyen Duc Hoang",
+      "email": "hoangnd@gmail.com",
+      "password": "123456",
+      "job": "Student",
+      "avatar": "/assets/2.png"
+    },
+    {
+      "id": 3,
+      "name": "Hoang The Anh",
+      "email": "anhnd@gmail.com",
+      "password": "123456",
+      "job": "Student",
+      "avatar": "/assets/3.png"
+    },
+    {
+      "id": 4,
+      "name": "Pham Xuan Duy",
+      "email": "duypx@gmail.com",
+      "password": "123456",
+      "job": "Student",
+      "avatar": "/assets/4.png"
+    }
+  ],
+  "workspaces": [
+    {
+      "id": 0,
+      "name": "Personal",
+      "members": [
+        1
+      ],
+      "membersDetail": [
+        {
+          "id": 1,
+          "name": "Me",
+          "email": "tiendat@gmail.com",
+          "password": "123456",
+          "job": "Student",
+          "avatar": "/assets/1.png"
+        }
+      ],
+      "avatar": "/assets/avatar.svg"
+    },
+    {
+      "id": 1,
+      "name": "UX UI Design",
+      "members": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "membersDetail": [
+        {
+          "id": 1,
+          "name": "Nguyen Tien Dat",
+          "role": "admin",
+          "email": "tiendat@gmail.com",
+          "avatar": "/assets/1.png"
+        },
+        {
+          "id": 2,
+          "name": "Nguyen Duc Hoang",
+          "email": "hoangnd@gmail.com",
+          "password": "123456",
+          "job": "Student",
+          "avatar": "/assets/2.png"
+        },
+        {
+          "id": 3,
+          "name": "Hoang The Anh",
+          "email": "anhnd@gmail.com",
+          "password": "123456",
+          "job": "Student",
+          "avatar": "/assets/3.png"
+        },
+        {
+          "id": 4,
+          "name": "Pham Xuan Duy",
+          "email": "duypx@gmail.com",
+          "password": "123456",
+          "job": "Student",
+          "avatar": "/assets/4.png"
+        }
+      ],
+      "avatar": "/assets/ws1.png"
+    },
+    {
+      "id": 2,
+      "name": "ITSS Project",
+      "members": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "avatar": "/assets/ws2.png"
+    }
+  ],
+  "sources": [
+    {
+      "id": "1",
+      "name": "eHust",
+      "avatar": "/assets/source1.png",
+      "tasks": [
+        {
+          "id": 1,
+          "name": "IT nihongo",
+          "start": "2023-06-29T14:10",
+          "end": "2023-06-29T17:35",
+          "status": "Open",
+          "des": "Classroom B1 303",
+          "source": "1"
+        },
+        {
+          "id": 2,
+          "name": "Software Engineering",
+          "start": "2023-06-29T09:30",
+          "end": "2023-06-29T11:45",
+          "status": "Open",
+          "des": "Classroom D9 401",
+          "source": "1"
+        },
+        {
+          "id": 3,
+          "name": "AI Introduction",
+          "start": "2023-06-30T07:30",
+          "end": "2023-06-30T09:45",
+          "status": "Open",
+          "des": "Classroom D9 401",
+          "source": "1"
+        },
+        {
+          "id": 4,
+          "name": "ITSS",
+          "start": "2023-06-26T12:30",
+          "end": "2023-06-26T15:50",
+          "status": "Open",
+          "des": "Classroom D9 501",
+          "source": "1"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Easy Edu",
+      "avatar": "/assets/source2.jpg",
+      "tasks": []
+    }
+  ],
+  "tasks": [
+    {
+      "id": "1",
+      "name": "Japanese 6",
+      "start": "2023-06-27T10:15",
+      "end": "2023-06-27T11:45",
+      "status": "Open",
+      "des": "D9 401",
+      "priority": "high",
+      "tag": "school",
+      "workspaceName": "Personal",
+      "workspace": "0",
+      "assignee": "1",
+      "recurring": "weekly",
+      "reminder": "false",
+      "source": "1"
+    },
+    {
+      "id": "2",
+      "name": "User interface",
+      "start": "2023-06-27T12:30",
+      "status": "In progress",
+      "end": "2023-06-27T15:50",
+      "des": "D5 503",
+      "priority": "high",
+      "tag": "learning",
+      "workspaceName": "Personal",
+      "workspace": "0",
+      "assignee": "1",
+      "recurring": "weekly",
+      "reminder": "false",
+      "source": "1"
+    },
+    {
+      "id": "3",
+      "name": "Kaiwa 2",
+      "start": "2023-06-28T10:15 ",
+      "end": "2023-06-28T11:45 ",
+      "des": "Online MS Teams",
+      "status": "Open",
+      "priority": "high",
+      "tag": "learning",
+      "workspaceName": "Personal",
+      "workspace": "0",
+      "assignee": "1",
+      "recurring": "weekly",
+      "reminder": "false"
+    },
+    {
+      "id": "4",
+      "name": "Software Engineering",
+      "start": "2023-06-29T9:30 ",
+      "end": "2023-06-29T11:45 ",
+      "des": "D9 401",
+      "status": "Open",
+      "priority": "high",
+      "tag": "learning",
+      "workspaceName": "Personal",
+      "workspace": "0",
+      "assignee": "1",
+      "recurring": "weekly",
+      "reminder": "false",
+      "source": "1"
+    },
+    {
+      "id": "5",
+      "name": "AI Introduction",
+      "start": "2023-06-30T6:40",
+      "end": "2023-06-30T9:50",
+      "des": "D9 401",
+      "status": "Open",
+      "priority": "high",
+      "tag": "learning",
+      "workspace": "0",
+      "workspaceName": "Personal",
+      "assignee": "1",
+      "recurring": "weekly",
+      "reminder": "false",
+      "source": "1"
+    },
+    {
+      "id": "6",
+      "name": "Go to tutor math",
+      "start": "2023-06-20T14:30",
+      "end": "2023-06-20T16:30",
+      "status": "Open",
+      "des": "Tutoring math for 10th graders at Cau Giay",
+      "priority": "normal",
+      "tag": "part time",
+      "workspace": "0",
+      "workspaceName": "Personal",
+      "assignee": "1",
+      "recurring": "weekly",
+      "reminder": "false",
+      "source": "2"
+    },
+    {
+      "id": "7",
+      "name": "Go to tutor physic",
+      "start": "2023-06-29T5:30 ",
+      "end": "2023-06-29T7:30 ",
+      "des": "Tutoring physic for 10th graders at Long Bien",
+      "status": "Open",
+      "priority": "normal",
+      "tag": "part time",
+      "workspace": "0",
+      "workspaceName": "Personal",
+      "assignee": "1",
+      "recurring": "weekly",
+      "reminder": "false",
+      "source": "2"
+    },
+    {
+      "id": "8",
+      "name": "Play badmintion",
+      "start": "2023-06-27T08:30",
+      "end": "2023-06-27T09:50",
+      "des": "Play badminton with club members at stadium",
+      "status": "Resolve",
+      "priority": "low",
+      "tag": "sport",
+      "workspace": "0",
+      "workspaceName": "Personal",
+      "assignee": "1",
+      "recurring": "weekly",
+      "reminder": "false"
+    },
+    {
+      "id": "9",
+      "name": "Implement authentication and authorization",
+      "des": "Develop and integrate the authentication and authorization mechanisms to secure the system.",
+      "status": "Close",
+      "start": "2023-06-11T00:00",
+      "end": "2023-06-14T00:00",
+      "priority": "normal",
+      "tag": "project",
+      "workspace": "1",
+      "workspaceName": "ITSS Project",
+      "relatedUser": [
+        1,
+        2,
+        4
+      ],
+      "assignee": "1",
+      "reminder": "false",
+      "checklist": [
+        {
+          "name": "Design the user authentication process",
+          "checked": true
+        },
+        {
+          "name": "Implement user registration and login functionality",
+          "checked": true
+        },
+        {
+          "name": "Set up user roles and permissions",
+          "checked": true
+        },
+        {
+          "name": "Implement access control mechanisms",
+          "checked": true
+        },
+        {
+          "name": "Integrate authentication with external identity providers",
+          "checked": false
+        },
+        {
+          "name": "Implement session management and logout functionality",
+          "checked": false
+        }
+      ],
+      "comments": [
+        {
+          "title": "Consider using industry-standard authentication protocols like OAuth or OpenID Connect",
+          "time": "2 days ago"
+        }
+      ],
+      "attachment": [
+        {
+          "name": "requirement.pdf",
+          "size": "3MB  "
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "name": "Create migration",
+      "des": "Generate and implement database migration",
+      "status": "Open",
+      "start": "2023-07-06T0:00 ",
+      "end": "2023-07-09T0:00 ",
+      "priority": "low",
+      "tag": "project",
+      "workspace": "1",
+      "workspaceName": "ITSS Project",
+      "relatedUser": [
+        1,
+        2,
+        3
+      ],
+      "assignee": "1",
+      "reminder": "false",
+      "checklist": [
+        {
+          "name": "Design the user authentication process",
+          "checked": true
+        },
+        {
+          "name": "Implement user registration and login functionality",
+          "checked": false
+        },
+        {
+          "name": "Set up user roles and permissions",
+          "checked": false
+        },
+        {
+          "name": "Implement access control mechanisms",
+          "checked": false
+        }
+      ],
+      "comments": [
+        {
+          "title": "Ensure secure storage and handling of user credentials",
+          "time": "2 days ago"
+        }
+      ]
+    },
+    {
+      "id": "11",
+      "name": "Write unit test",
+      "des": "Develop and implement unit tests to verify the functionality",
+      "start": "2023-07-06T0:00",
+      "end": "2023-07-09T0:00 ",
+      "status": "Open",
+      "priority": "low",
+      "tag": "project",
+      "workspace": "1",
+      "workspaceName": "ITSS Project",
+      "relatedUser": [
+        2,
+        1,
+        4
+      ],
+      "assignee": "2",
+      "reminder": "false",
+      "checklist": [
+        {
+          "name": "Identify the components or units to be tested",
+          "checked": true
+        },
+        {
+          "name": "Design test cases to cover different scenarios and edge cases",
+          "checked": false
+        }
+      ],
+      "comments": [
+        {
+          "time": "3 days ago",
+          "title": "Use a testing framework or library suitable for the programming language or technology stack"
+        }
+      ],
+      "attachment": [
+        {
+          "name": "guideline.pdf",
+          "size": "10.4MB  "
+        }
+      ]
+    },
+    {
+      "id": "12",
+      "name": "Deploy Config Servers for Production Deployments",
+      "des": "Set up and configure the necessary configuration servers to support production deployments of the application",
+      "start": "2023-07-06T0:00 ",
+      "end": "2023-07-09T0:00 ",
+      "priority": "high",
+      "tag": "project",
+      "workspace": "1",
+      "workspaceName": "ITSS Project",
+      "relatedUser": [
+        2,
+        3,
+        4
+      ],
+      "assignee": "2",
+      "reminder": "false",
+      "checklist": [
+        {
+          "name": "Select appropriate configuration server technology or tool",
+          "checked": true
+        },
+        {
+          "name": "Install and set up the configuration server software",
+          "checked": true
+        },
+        {
+          "name": "Configure the server to manage application configurations",
+          "checked": true
+        },
+        {
+          "name": "Define and organize configuration files for different environments",
+          "checked": true
+        },
+        {
+          "name": "Ensure secure storage and access to configuration data",
+          "checked": false
+        }
+      ],
+      "comments": [
+        {
+          "time": "2 days ago",
+          "title": "Consider using tools like Spring Cloud Config, HashiCorp Consul, or etcd"
+        }
+      ],
+      "attachment": [
+        {
+          "name": "config.pdf",
+          "size": "3MB  "
+        }
+      ]
+    },
+    {
+      "id": "13",
+      "name": "Write Website Specification",
+      "des": "Create a comprehensive specification document",
+      "status": "Open",
+      "start": "2023-06-20T00:00",
+      "end": "2023-06-23T00:00",
+      "priority": "high",
+      "tag": "project",
+      "workspace": "1",
+      "workspaceName": "ITSS Project",
+      "relatedUser": [
+        1,
+        3,
+        4
+      ],
+      "assignee": "1",
+      "reminder": "false",
+      "checklist": [
+        {
+          "name": "Gather requirements from stakeholders and project te",
+          "checked": true
+        },
+        {
+          "name": "Define the target audience and user personas",
+          "checked": true
+        },
+        {
+          "name": "Outline the website structure and navigation",
+          "checked": true
+        },
+        {
+          "name": "Specify the visual design and branding guidelines",
+          "checked": false
+        }
+      ],
+      "comments": [
+        {
+          "title": "Regularly update the specification as requirements evolve or change",
+          "time": "2 days ago"
+        }
+      ],
+      "attachment": [
+        {
+          "name": "customer-require.pdf",
+          "size": "5MB  "
+        }
+      ]
+    },
+    {
+      "id": "14",
+      "name": "Project kickoff meeting",
+      "start": "2023-06-27T17:00",
+      "end": "2023-06-27T18:30",
+      "status": "O",
+      "description": "ITSS Project kickoff meeting",
+      "priority": "high",
+      "tag": "project",
+      "workspace": "1",
+      "relatedUser": [
+        1,
+        2,
+        3
+      ],
+      "workspaceName": "ITSS Project",
+      "assignee": "1",
+      "recurring": "weekly",
+      "reminder": "true"
+    },
+    {
+      "id": "20",
+      "name": "Implement authentication and authorization",
+      "des": "Develop and integrate the authentication and authorization mechanisms to secure the system.",
+      "status": "Close",
+      "start": "2023-06-11T00:00",
+      "end": "2023-06-14T00:00",
+      "priority": "normal",
+      "tag": "project",
+      "workspace": "1",
+      "workspaceName": "ITSS Project",
+      "relatedUser": [
+        1,
+        2,
+        4
+      ],
+      "assignee": "1",
+      "reminder": "false",
+      "checklist": [
+        {
+          "name": "Design the user authentication process",
+          "checked": true
+        },
+        {
+          "name": "Implement user registration and login functionality",
+          "checked": true
+        },
+        {
+          "name": "Set up user roles and permissions",
+          "checked": true
+        },
+        {
+          "name": "Implement access control mechanisms",
+          "checked": true
+        },
+        {
+          "name": "Integrate authentication with external identity providers",
+          "checked": false
+        },
+        {
+          "name": "Implement session management and logout functionality",
+          "checked": false
+        }
+      ],
+      "comments": [
+        {
+          "title": "Consider using industry-standard authentication protocols like OAuth or OpenID Connect",
+          "time": "2 days ago"
+        }
+      ],
+      "attachment": [
+        {
+          "name": "requirement.pdf",
+          "size": "3MB  "
+        }
+      ]
+    }
+  ]
+}
