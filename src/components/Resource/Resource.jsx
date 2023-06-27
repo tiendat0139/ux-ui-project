@@ -17,15 +17,17 @@ const Resource = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const res = await fetch("http://localhost:3000/tasks?workspace=1");
+      const res = await fetch("http://localhost:3000/workspaces/1");
       const data = await res.json();
-      const newFormat = data.map((item) => {
+      const newFormat = data.tasks.map((item) => {
         return {
           ...item,
           start: moment(item.start),
           end: moment(item.end),
+          assigneeId: item.assignee.id,
           canChangeGroup: true,
           canMove: true,
+          canResize: true,
           itemProps: {
             style: {
               backgroundColor: "#039be5",
@@ -43,7 +45,7 @@ const Resource = () => {
     const fetchData = async () => {
       const res = await fetch("http://localhost:3000/workspaces/1");
       const data = await res.json();
-      setMembers(data.membersDetail);
+      setMembers(data.members);
     };
     fetchData();
   }, []);
@@ -55,7 +57,7 @@ const Resource = () => {
     itemIdKey: "id",
     itemTitleKey: "name",
     itemDivTitleKey: "title",
-    itemGroupKey: "assignee",
+    itemGroupKey: "assigneeId",
     itemTimeStartKey: "start",
     itemTimeEndKey: "end",
   };

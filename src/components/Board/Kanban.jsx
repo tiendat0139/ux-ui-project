@@ -27,34 +27,24 @@ const Kanban = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const res1 = await fetch(
-        "http://localhost:3000/tasks?assingee=1&status=Open"
-      );
-      const data1 = await res1.json();
+      const res = await fetch("http://localhost:3000/tasks?assignee.id=1");
+      const data = await res.json();
+      const tasks = data
+      const open = tasks.filter(task => task.status === "Open")
+      const inProgress = tasks.filter(task => task.status === "In progress")
+      const resolve = tasks.filter(task => task.status === "Resolve")
+      const close = tasks.filter(task => task.status === "Close")
 
-      const res2 = await fetch(
-        "http://localhost:3000/tasks?assingee=1&status=In progress"
-      );
-      const data2 = await res2.json();
-
-      const res3 = await fetch(
-        "http://localhost:3000/tasks?assingee=1&status=Resolve"
-      );
-      const data3 = await res3.json();
-
-      const res4 = await fetch(
-        "http://localhost:3000/tasks?assingee=1&status=Close"
-      );
-      const data4 = await res4.json();
 
       setColumns({
-        0: { name: "Open", tasks: data1 },
-        1: { name: "In Progress", tasks: data2 },
-        2: { name: "Resolve", tasks: data3 },
-        3: { name: "Close", tasks: data4 },
+        0: { name: "Open", tasks: open },
+        1: { name: "In Progress", tasks: inProgress },
+        2: { name: "Resolve", tasks: resolve },
+        3: { name: "Close", tasks: close },
       });
     };
     fetchData();
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 

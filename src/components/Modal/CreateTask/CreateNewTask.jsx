@@ -64,7 +64,7 @@ const CreateNewTask = ({ setOpenModal }) => {
     const fetchData = async () => {
       const res = await fetch("http://localhost:3000/workspaces");
       const data = await res.json();
-      setWorkspaces(data)
+      setWorkspaces([data[0],data[2]])
     }
     fetchData();
 

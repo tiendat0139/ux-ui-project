@@ -36,13 +36,8 @@ const DayView = () => {
     let newFormat;
     newFormat = Promise.all(
       tasks.map(async (task) => {
-        const res = await fetch(
-          `http://localhost:3000/workspaces/${task.workspace}`
-        );
-        const workspace = await res.json();
         return {
           ...task,
-          workspaceName: workspace.name,
           backgroundColor: getColorByTag(task.tag),
         };
       })
@@ -67,7 +62,7 @@ const DayView = () => {
 
   useEffect(() => {
     const getData = async () => {
-      const res = await fetch("http://localhost:3000/tasks?assignee=1");
+      const res = await fetch("http://localhost:3000/tasks?assignee.id=1");
       const tasks = await res.json();
       const newTasks = await reFormatTasks(tasks);
       setEvents(newTasks);
@@ -78,9 +73,9 @@ const DayView = () => {
   }, []);
 
   const handleEventClick = (info) => {
-    setSelectedTaskId(info.event._def.publicId)
-    setOpenModal(true)
-  }
+    setSelectedTaskId(info.event._def.publicId);
+    setOpenModal(true);
+  };
   return (
     <Box>
       <FullCalendar
@@ -113,7 +108,11 @@ const DayView = () => {
         }}
         editable={true}
       />
-      <TaskDetailModal taskId={selectedTaskId} open={openModal} setOpen={setOpenModal} />
+      <TaskDetailModal
+        taskId={selectedTaskId}
+        open={openModal}
+        setOpen={setOpenModal}
+      />
     </Box>
   );
 };
@@ -173,7 +172,7 @@ const renderEventContent = (info) => {
   }
   if (info.view.type === "dayGridMonth") {
     return (
-      <Box display="flex" sx={{ mt: "0.5rem", py: "0.2rem"}}>
+      <Box display="flex" sx={{ mt: "0.5rem", py: "0.2rem" }}>
         <Box sx={{ px: "0.4rem" }}>{info.timeText}</Box>
         <Box sx={{ px: "0.4rem" }}>{info.event.extendedProps.name}</Box>
       </Box>

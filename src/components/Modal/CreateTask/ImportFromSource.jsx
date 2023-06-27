@@ -56,6 +56,7 @@ const ImportFromSource = ({ setOpenModal }) => {
       start: dayjs(selectedTask.start),
       end: dayjs(selectedTask.end),
       des: selectedTask.des,
+      recur: selectedTask.recur,
     });
   };
 

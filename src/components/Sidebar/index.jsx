@@ -5,6 +5,7 @@ import WorkspaceItem from "./WorkspaceItem";
 import Icon from "../Icons";
 import ws1 from "../../assets/img/avatar/ws1.png";
 import ws2 from "../../assets/img/avatar/ws2.png";
+import ws3 from "../../assets/img/avatar/ws3.png";
 
 const Sidebar = () => {
   return (
@@ -55,6 +56,7 @@ const Sidebar = () => {
           </Box>
           <WorkspaceItem text="ITSS Project" avatar={ws1}  href="/workspace/1" />
           <WorkspaceItem text="UX UI Design" avatar={ws2}  href="/workspace/2" />
+          <WorkspaceItem text="Software Engineering" avatar={ws3}  href="/workspace/3" />
         </Box>
       </CustomizeAccordion>
     </Box>

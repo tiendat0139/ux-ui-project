@@ -33,7 +33,7 @@ const Checklist = ({ list }) => {
         <Typography variant="h5" sx={{ mb: "1rem" }} fontWeight={500}>
           {countChecked()}% complete
         </Typography>
-        <Progress value={60} />
+        <Progress value={countChecked()} />
       </Box>
       <Box
         sx={{

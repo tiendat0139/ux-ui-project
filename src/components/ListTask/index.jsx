@@ -53,31 +53,17 @@ const ListTask = () => {
 
   const getStatusColor = (status) => {
     if (status === "Open") return palette.info.main;
-    if (status === "In Progress") return palette.info.light;
+    if (status === "In progress") return palette.info.light;
     if (status === "Resolve") return palette.success.main;
     if (status === "Close") return palette.danger.main;
   };
   useEffect(() => {
     const fetchData = async () => {
       const res = await fetch(
-        "http://localhost:3000/tasks?workspace=1&status=Open"
+        "http://localhost:3000/workspaces/1"
       );
       const data = await res.json();
-
-      let newFormat = await Promise.all(
-        data.map(async (task) => {
-          const res = await fetch(
-            `http://localhost:3000/users/${task.assignee}`
-          );
-          const user = await res.json();
-          return {
-            ...task,
-            assignee: user,
-          };
-        })
-      );
-      console.log(newFormat);
-      setRows(newFormat);
+      setRows(data.tasks);
     };
 
     fetchData();
@@ -117,7 +103,7 @@ const ListTask = () => {
         </Box>
       </Box>
       <Box sx={{ width: "100%" }}>
-        <TableContainer>
+        <TableContainer sx={{ maxHeight: "40rem", overflowY: "scroll"}}>
           <Table>
             <TableHead>
               <TableRow>

@@ -21,6 +21,7 @@ import { useTheme } from "@emotion/react";
 import Icon from "../Icons";
 import Checklist from "../_CheckList";
 import FileUpload from "../FileUpload";
+import Evaluate from "../Evaluate";
 
 const CustomTimeline = React.lazy(() => import("../Timeline.jsx"));
 const Comment = React.lazy(() => import("../Comment"));
@@ -28,7 +29,6 @@ const Comment = React.lazy(() => import("../Comment"));
 const TaskDetailModal = ({ taskId, open, setOpen }) => {
   const { palette } = useTheme();
   const [task, setTask] = useState({});
-  const [assignee, setAssignee] = useState({});
   const [file, setFile] = useState([]);
   const [tab, setTab] = useState(1);
 
@@ -133,20 +133,12 @@ const TaskDetailModal = ({ taskId, open, setOpen }) => {
     return color;
   };
 
-  const getUser = async (userId) => {
-    const res = await fetch(`http://localhost:3000/users/${userId}`);
-    const user = await res.json();
-    return user;
-  };
-
   useEffect(() => {
     const fetchData = async () => {
-      const res = await fetch(` http://localhost:3000/tasks/${taskId}`);
+      const res = await fetch(`http://localhost:3000/tasks/${taskId}`);
       const data = await res.json();
       setTask(data);
       setFile(data.attachment);
-      const assignee = await getUser(data.assignee);
-      setAssignee(assignee);
     };
 
     fetchData();
@@ -203,7 +195,7 @@ const TaskDetailModal = ({ taskId, open, setOpen }) => {
               height="88%"
             >
               <Box
-                sx={{ width: task.workspace == 0 ? "100%" : "45%", mb: "3rem" }}
+                sx={{ width: task.workspace == 0 ? "100%" : "45%" }}
                 display="flex"
                 flexDirection="column"
                 gap="1rem"
@@ -375,7 +367,7 @@ const TaskDetailModal = ({ taskId, open, setOpen }) => {
                       </Box>
                       <Box display="flex" alignItems="center" gap="1rem">
                         <Avatar
-                          src={assignee.avatar}
+                          src={task.assignee?.avatar}
                           sx={{ width: "2.4rem", height: "2.4rem" }}
                         />
                         <Typography
@@ -383,7 +375,44 @@ const TaskDetailModal = ({ taskId, open, setOpen }) => {
                           fontWeight={400}
                           fontFamily="Outfit"
                         >
-                          {assignee.name}
+                          {task.assignee?.name}
+                        </Typography>
+                      </Box>
+                    </Box>
+                  )}
+                  {task.workspace != 0 && (
+                    <Box display="flex" alignItems="center" gap="4rem">
+                      <Box
+                        display="flex"
+                        alignItems="center"
+                        gap="0.5rem"
+                        sx={{ width: "10rem" }}
+                      >
+                        <Icon
+                          name="user"
+                          size={24}
+                          color={alpha(palette.text.light, 0.8)}
+                        />
+                        <Typography
+                          variant="h5"
+                          color={alpha(palette.text.light, 0.9)}
+                          fontWeight={400}
+                          fontFamily="Outfit"
+                        >
+                          Evaluator
+                        </Typography>
+                      </Box>
+                      <Box display="flex" alignItems="center" gap="1rem">
+                        <Avatar
+                          src={task.assessor?.avatar}
+                          sx={{ width: "2.4rem", height: "2.4rem" }}
+                        />
+                        <Typography
+                          color={palette.text.light}
+                          fontWeight={400}
+                          fontFamily="Outfit"
+                        >
+                          {task.assessor?.name}
                         </Typography>
                       </Box>
                     </Box>
@@ -427,7 +456,7 @@ const TaskDetailModal = ({ taskId, open, setOpen }) => {
                     <Typography
                       variant="h5"
                       fontWeight="500"
-                      sx={{ mt: "2rem" }}
+                      sx={{ mt: "1rem" }}
                     >
                       Attachment
                     </Typography>
@@ -460,15 +489,21 @@ const TaskDetailModal = ({ taskId, open, setOpen }) => {
                     >
                       <Tab label="Recent activity" value={1} />
                       <Tab label="Comment" value={2} />
+                      <Tab label="Evaluate" value={3} />
                     </Tabs>
                   </Box>
 
                   <Box sx={{ p: "2rem", height: "100%" }}>
                     <Suspense fallback={<div>Loading...</div>}>
-                      {tab === 2 ? (
-                        <Comment list={task.comments} />
-                      ) : (
+                      {tab === 1 && (
                         <CustomTimeline activities={timelineList} />
+                      )}
+                      {tab === 2 && <Comment list={task.comments} />}
+                      {tab === 3 && (
+                        <Evaluate
+                          editable={task.assessor?.id === 1}
+                          evaluate={task.evaluate}
+                        />
                       )}
                     </Suspense>
                   </Box>
