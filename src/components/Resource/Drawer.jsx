@@ -17,7 +17,7 @@ const Drawer = ({ open }) => {
       setTasks(data);
     };
     fetchData();
-  });
+  }, [id]);
 
   return (
     <Box
