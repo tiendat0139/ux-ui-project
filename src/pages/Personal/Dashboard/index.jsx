@@ -16,30 +16,10 @@ const Dashboard = () => {
         <Grid container columnSpacing={4} rowSpacing={2}>
           <Grid item md={8} display="flex" flexDirection="column" gap="2rem">
             <Box display="flex" gap="2rem">
-              <StatisBox
-                count={3}
-                title="Project"
-                color2="#9f80fa"
-                color1="#6e40f8"
-              />
-              <StatisBox
-                count={5}
-                title="Complete"
-                color2="#28d64e"
-                color1="#14b337"
-              />
-              <StatisBox
-                count={10}
-                title="Open Tasks"
-                color2="#1AA8E9"
-                color1="#0273f5"
-              />
-              <StatisBox
-                count={20}
-                title="Total Tasks"
-                color2="#fc859d"
-                color1="#f73a5f"
-              />
+              <StatisBox count={3} title="Project" color1="#083AA9" />
+              <StatisBox count={5} title="Complete" color1="#2abba7" />
+              <StatisBox count={10} title="Open Tasks" color1="#4185C6" />
+              <StatisBox count={20} title="Total Tasks" color1="#FECF16" />
             </Box>
             <Box
               sx={{

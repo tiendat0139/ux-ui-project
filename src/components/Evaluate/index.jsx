@@ -1,26 +1,21 @@
-import { Box, TextField, Tooltip, Typography, useTheme } from "@mui/material";
+import { Box, Button, TextField, Tooltip, Typography, useTheme } from "@mui/material";
 import PropTypes from "prop-types";
+import { toast } from "react-toastify";
 
-const Evaluate = ({ editable, evaluate }) => {
+const Evaluate = ({ editable, evaluate, setOpen }) => {
   const { palette } = useTheme();
+  const handleCloseTask = () => {
+    toast.info("Task closed");
+    setOpen(false);
+  }
   return (
     <Box>
-      <Tooltip title={editable ? "" : "You are not evaluator"} placement="top">
-        <TextField
-          fullWidth
-          label="Feedback"
-          disabled={!editable}
-          multiline={true}
-          minRows={5}
-          defaultValue={evaluate?.content}
-        />
-      </Tooltip>
       <Box
         display="flex"
         gap="1rem"
         justifyContent="end"
         alignItems="center"
-        sx={{ mt: "2rem" }}
+        sx={{ mb: "3rem" }}
       >
         <Typography variant="h4" color={palette.text.dark}>
           Score:
@@ -49,11 +44,26 @@ const Evaluate = ({ editable, evaluate }) => {
           100
         </Typography>
       </Box>
+      <Tooltip title={editable ? "" : "You are not evaluator"} placement="top">
+        <TextField
+          fullWidth
+          label="Feedback"
+          disabled={!editable}
+          multiline={true}
+          minRows={5}
+          defaultValue={evaluate?.content}
+        />
+      </Tooltip>
+      <Box display="flex" gap="2rem" justifyContent="end" sx={{mt: "3rem"}}>
+        <Button variant="outlined">Rework</Button>
+        <Button variant="contained" onClick={handleCloseTask}>Close task</Button>
+      </Box>
     </Box>
   );
 };
 Evaluate.propTypes = {
   editable: PropTypes.bool,
   evaluate: PropTypes.object,
+  setOpen: PropTypes.func
 };
 export default Evaluate;

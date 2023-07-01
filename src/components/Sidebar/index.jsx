@@ -54,8 +54,8 @@ const Sidebar = () => {
               </Typography>
             </Button>
           </Box>
-          <WorkspaceItem text="ITSS Project" avatar={ws1}  href="/workspace/1" />
-          <WorkspaceItem text="UX UI Design" avatar={ws2}  href="/workspace/2" />
+          <WorkspaceItem text="ITSS Project" avatar={ws2}  href="/workspace/1" />
+          <WorkspaceItem text="UX UI Design" avatar={ws1}  href="/workspace/2" />
           <WorkspaceItem text="Software Engineering" avatar={ws3}  href="/workspace/3" />
         </Box>
       </CustomizeAccordion>

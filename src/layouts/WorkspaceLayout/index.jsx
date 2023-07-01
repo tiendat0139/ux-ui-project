@@ -8,7 +8,7 @@ import { Box } from "@mui/material";
 const WorkspaceLayout = () => {
   return (
     <Box>
-      <PageHeader pageType="workspace" />
+      <PageHeader pageType="workspace" title="List" />
       <Routes>
         {workspaceRouter.map((route, index) => (
           <Route

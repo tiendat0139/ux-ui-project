@@ -24,7 +24,7 @@ const DayView = () => {
 
   const getColorByTag = (tag) => {
     let color;
-    if (tag === "school") color = "#0099E7";
+    if (tag === "school") color = "#039be5";
     if (tag === "project") color = "#0070B1";
     if (tag === "sport") color = "#1AB877";
     if (tag === "part time") color = "#3f51b5";

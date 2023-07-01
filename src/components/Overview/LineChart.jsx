@@ -35,11 +35,11 @@ const LineChart = () => {
         backgroundColor: (context) => {
           const ctx = context.chart.ctx;
           const gradient = ctx.createLinearGradient(0, 0, 0, 200);
-          gradient.addColorStop(0, alpha("#3793fb", 0.3));
-          gradient.addColorStop(1, alpha("#3793fb", 0));
+          gradient.addColorStop(0, alpha("#1aa8e9", 0.3));
+          gradient.addColorStop(1, alpha("#1aa8e9", 0));
           return gradient;
         },
-        borderColor: "#3793fb",
+        borderColor: "#1aa8e9",
         pointRadius: 4,
         pointHoverRadius: 8,
       },

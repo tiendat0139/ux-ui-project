@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { Suspense, useEffect, useState } from "react";
 import { useTheme } from "@emotion/react";
 import {
   Box,
@@ -13,12 +13,13 @@ import {
   Typography,
   Pagination,
   Avatar,
-  alpha,
 } from "@mui/material";
 import SearchBox from "../SearchBox";
 import PropTypes from "prop-types";
 import Icon from "../Icons";
-import TaskDetailModal from "../Modal/TaskDetailModal";
+import Filter from "./Filter";
+import { useParams } from "react-router-dom";
+const TaskDetailModal = React.lazy(() => import("../Modal/TaskDetailModal"));
 
 const Priority = ({ priority }) => {
   return (
@@ -50,7 +51,9 @@ const ListTask = () => {
   const [rows, setRows] = useState([]);
   const [openModal, setOpenModal] = useState(false);
   const [selectedTask, setSelectedTask] = useState();
-
+  const [page, setPaget] = useState(1);
+  let { id } = useParams();
+  
   const getStatusColor = (status) => {
     if (status === "Open") return palette.info.main;
     if (status === "In progress") return palette.info.light;
@@ -60,14 +63,14 @@ const ListTask = () => {
   useEffect(() => {
     const fetchData = async () => {
       const res = await fetch(
-        "http://localhost:3000/workspaces/1"
+        `http://localhost:3000/tasks?workspace=${id}&&_page=${page}&_limit=5`
       );
       const data = await res.json();
-      setRows(data.tasks);
+      setRows(data);
     };
 
     fetchData();
-  }, []);
+  }, [page, id]);
 
   const headCells = [
     { id: "Key", label: "Key" },
@@ -89,21 +92,13 @@ const ListTask = () => {
       <Box display="flex" justifyContent="end">
         <Box display="flex" alignItems="center" gap="2rem">
           <SearchBox trailingButton={false} />
-          <Box
-            display="flex"
-            gap="0.5rem"
-            alignItems="center"
-            sx={{ cursor: "pointer", "&:hover": { opacity: "0.8" } }}
-          >
-            <Icon name="filter" size={20} />
-            <Typography color={alpha(palette.text.light, 0.8)}>
-              Filters
-            </Typography>
+          <Box sx={{ cursor: "pointer", "&:hover": { opacity: "0.8" } }}>
+            <Filter setFiltered={setRows} />
           </Box>
         </Box>
       </Box>
       <Box sx={{ width: "100%" }}>
-        <TableContainer sx={{ maxHeight: "40rem", overflowY: "scroll"}}>
+        <TableContainer>
           <Table>
             <TableHead>
               <TableRow>
@@ -117,7 +112,7 @@ const ListTask = () => {
               </TableRow>
             </TableHead>
             <TableBody>
-              {rows.map((row, index) => (
+              {rows?.map((row, index) => (
                 <TableRow
                   key={index}
                   sx={{ cursor: "pointer" }}
@@ -179,13 +174,20 @@ const ListTask = () => {
         justifyContent="center"
         sx={{ mt: "5rem", textAlign: "center" }}
       >
-        <Pagination count={10} color="primary" />
+        <Pagination
+          count={5}
+          color="primary"
+          page={page}
+          onChange={(e, value) => setPaget(value)}
+        />
       </Box>
-      <TaskDetailModal
-        open={openModal}
-        setOpen={setOpenModal}
-        taskId={selectedTask}
-      />
+      <Suspense loading={<div>Loading...</div>}>
+        <TaskDetailModal
+          open={openModal}
+          setOpen={setOpenModal}
+          taskId={selectedTask}
+        />
+      </Suspense>
     </Box>
   );
 };

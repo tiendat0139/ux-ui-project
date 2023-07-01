@@ -27,7 +27,7 @@ const TaskList = ({ title, list }) => {
 
   const getTagColor = (tag) => {
     if (tag === "project") return "#3f51b5";
-    if (tag === "learning") return "#0099e7";
+    if (tag === "learning") return "#1aa8e9";
     if (tag == "sport") return "##1ab877";
   };
 
@@ -85,7 +85,7 @@ const TaskList = ({ title, list }) => {
               bgcolor: "#fff",
               p: "1rem 2rem",
               borderRadius: "1rem",
-              boxShadow: "-4px 4px 10px rgba(0,0,0,0.15)",
+              boxShadow: "-1px 1px 4px rgba(0,0,0,0.3)",
               cursor: "pointer",
               "&:hover": {
                 transform: "translate(1px, -1px)",

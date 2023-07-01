@@ -43,7 +43,7 @@ const PageHeader = ({ title, pageType }) => {
             sx={{ cursor: "pointer", fontSize: "1.3rem", fontFamily: "Outfit", lineHeight: "2.56rem" }}
             fontWeight={500}
           >
-            UX UI Design
+            ITSS Project
           </Link>
         )}
         <Link

@@ -1,7 +1,7 @@
 .sticky {
   position: sticky;
   top: 0;
-  z-index: 2000;
+  z-index: 10;
   background-color: #083AA9 !important;
 }
 .sb-header{
@@ -11,6 +11,13 @@
   align-items: center;
   border-right: 1px solid #bbb;
 }
+.rct-outer {
+  display: block !important;
+  // overflow-y: scroll !important;
+  max-height: 42rem !important;
+  white-space: nowrap !important;
+}
+
 .react-calendar-timeline {
   border-radius: 10px;
   overflow: hidden;
@@ -29,6 +36,16 @@
     }
     .rct-hl-even, .rct-hl-odd{
       border: none;
+    }
+  }
+  .rct-vertical-lines {
+    .rct-vl {
+      position: absolute;
+      border-left: 1.6px solid rgba($color: #000000, $alpha: 0.05) !important;
+      z-index: 30;
+      &.rct-vl-first {
+        border-left-width: 2px;
+      }
     }
   }
   .rct-sidebar {
@@ -57,12 +74,49 @@
     }
   }
 }
+.react-calendar-timeline .rct-calendar-header :last-child div {
+  border-left: 1px solid rgba($color: #000000, $alpha: 0.1) !important;
+  font-size: 1.4rem;
+  vertical-align: center;
+  line-height: 3rem;
+}
+
 .rct-day-6, .rct-day-0{
   background: transparent !important;
 }
-.rct-item {
+.rct-item-work {
   height: 30px !important;
   line-height: 30px !important;
   border-radius: 30px;
-  padding-left:20px;
+  padding-left: 10px;
+  border: none !important;
+  background-color: #1aa8e9 !important;
+  text-overflow: ellipsis;
+  &:hover {
+    background-color: #34dec7 !important;
+  }
 }
+
+.rct-item-free {
+  height: 30px !important;
+  line-height: 30px !important;
+  border-radius: 30px;
+  padding-left: 10px;
+  border: 2px dashed rgba($color: #1aa8e9, $alpha: 1) !important;
+  background-color: transparent !important;
+  color: #1aa8e9 !important;
+  overflow: hidden;
+
+}
+.rct-item-content {
+    overflow: hidden !important;
+    max-width: 100%;
+    position: sticky;
+    position: -webkit-sticky;
+    left: 0px;
+    display: inline-block;
+    border-radius: 2px;
+    padding: 0 6px;
+    height: 100%;
+}
+

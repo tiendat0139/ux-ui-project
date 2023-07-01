@@ -37,13 +37,15 @@ const ProgressTable = () => {
     <TableContainer>
       <Table aria-label="a dense table">
         <TableHead>
-          {headCells.map((headCell) => (
-            <TableCell key={headCell.id}>
-              <TableSortLabel sx={{ color: "#666" }}>
-                {headCell.label}
-              </TableSortLabel>
-            </TableCell>
-          ))}
+          <TableRow>
+            {headCells.map((headCell) => (
+              <TableCell key={headCell.id}>
+                <TableSortLabel sx={{ color: "#666" }}>
+                  {headCell.label}
+                </TableSortLabel>
+              </TableCell>
+            ))}
+          </TableRow>
         </TableHead>
         <TableBody>
           {rows.map((row, index) => (

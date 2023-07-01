@@ -17,13 +17,16 @@ import avt1 from "../../assets/img/avatar/1.png";
 import avt2 from "../../assets/img/avatar/2.png";
 import avt3 from "../../assets/img/avatar/3.png";
 import avt4 from "../../assets/img/avatar/4.png";
-import ws1 from "../../assets/img/avatar/ws1.png";
 
 import { useEffect } from "react";
 
-const WorkspaceHeader = ({ workspaceName, setPageTitle }) => {
+const WorkspaceHeader = ({ setPageTitle }) => {
   const { palette } = useTheme();
   const [tab, setTab] = useState("List");
+  const [workspaceInfo, setWorkspaceInfo] = useState({
+    name: "",
+    avatar: ""
+  });
 
   let { id } = useParams();
   const location = useLocation();
@@ -33,11 +36,11 @@ const WorkspaceHeader = ({ workspaceName, setPageTitle }) => {
     if (newValue === "List") {
       setTab("List");
       navigate(`/workspace/${id}`);
+      setPageTitle("List");
     } else {
       setTab(newValue);
       setPageTitle(newValue);
       navigate(`/workspace/${id}/${newValue.toLowerCase()}`);
-
     }
   };
 
@@ -48,6 +51,14 @@ const WorkspaceHeader = ({ workspaceName, setPageTitle }) => {
     else setTab("List");
   }, [location.pathname, tab]);
 
+  useEffect(() => {
+    const fetchData = async () => {
+      const res = await fetch(`http://localhost:3000/workspaces/${id}`);
+      const data = await res.json();
+      setWorkspaceInfo({name: data.name, avatar: data.avatar});
+    }
+    fetchData();
+  }, [id])
   return (
     <Box sx={{ pt: "1rem", m: "0 -2.4rem 3rem -2.4rem", width: "100%" }}>
       <Box display="flex" justifyContent="space-between" sx={{ px: "2.4rem", pr: "30rem"}}>
@@ -57,7 +68,7 @@ const WorkspaceHeader = ({ workspaceName, setPageTitle }) => {
               width: "2.8rem",
               height: "2.8rem",
             }}
-            src={ws1}
+            src={workspaceInfo.avatar}
             variant="square"
           />
           <Typography
@@ -66,7 +77,7 @@ const WorkspaceHeader = ({ workspaceName, setPageTitle }) => {
             color={palette.text.light}
             fontWeight={700}
           >
-            {workspaceName}
+            {workspaceInfo.name}
           </Typography>
         </Box>
         <Box display="flex" alignItems="center" gap="2rem">

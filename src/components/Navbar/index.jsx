@@ -6,6 +6,7 @@ import Dropdown from "./Dropdown";
 import Input from "../SearchBox";
 import Icon from "../Icons";
 import PropTypes from "prop-types";
+import Notification from "../Notification";
 
 const Navbar = ({ handleOpenModal }) => {
   const { palette } = useTheme();
@@ -70,9 +71,9 @@ const Navbar = ({ handleOpenModal }) => {
       </Box>
       <Box display="flex" alignItems="center" gap="3rem">
         <Input />
-        <Box display="flex" gap="2rem">
-          <Icon name="alert" size={16} />
+        <Box display="flex" gap="2rem" alignItems="center">
           <Icon name="question" size={16} />
+          <Notification />
         </Box>
         <Dropdown menuItemList={dropdownItemList} />
       </Box>

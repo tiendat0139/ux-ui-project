@@ -46,13 +46,13 @@ const BarChart = () => {
       {
         label: "On time",
         data: [8, 6, 9, 5, 4, 6, 7, 8],
-        backgroundColor: "#1AA8E9",
+        backgroundColor: "#104C9C",
         barPercentage: 0.5,
       },
       {
         label: "Overdue",
         data: [1, 2, 0, 1, 3, 2, 1],
-        backgroundColor: "#28d64e",
+        backgroundColor: "#1AA8E9",
         barPercentage: 0.5,
       },
     ],

@@ -26,11 +26,12 @@ import Evaluate from "../Evaluate";
 const CustomTimeline = React.lazy(() => import("../Timeline.jsx"));
 const Comment = React.lazy(() => import("../Comment"));
 
-const TaskDetailModal = ({ taskId, open, setOpen }) => {
+const TaskDetailModal = ({ taskId = 1, open, setOpen }) => {
   const { palette } = useTheme();
   const [task, setTask] = useState({});
   const [file, setFile] = useState([]);
   const [tab, setTab] = useState(1);
+  const pathname = window.location.pathname;
 
   const breadcrumbs = [
     <Link
@@ -58,7 +59,7 @@ const TaskDetailModal = ({ taskId, open, setOpen }) => {
       key="2"
       color={palette.text.light}
       href=""
-      sx={{ cursor: "pointer", fontSize: "1.3rem", fontFamily: "Outfit" }}
+      sx={{ cursor: "pointer", fontSize: "1.3rem", fontFamily: "Roboto" }}
       fontWeight={500}
     >
       {`IT-${task.id}`}
@@ -118,7 +119,7 @@ const TaskDetailModal = ({ taskId, open, setOpen }) => {
 
   const getStatusColor = (status) => {
     if (status === "Open") return palette.info.main;
-    if (status === "In Progress") return palette.info.light;
+    if (status === "In progress") return palette.info.light;
     if (status === "Resolve") return palette.success.main;
     if (status === "Close") return palette.danger.main;
   };
@@ -314,35 +315,41 @@ const TaskDetailModal = ({ taskId, open, setOpen }) => {
                       {task.start?.replace("T", " ")}
                     </Typography>
                   </Box>
-                  <Box display="flex" gap="4rem" alignItems="center">
-                    <Box display="flex" gap="0.5rem" sx={{ width: "10rem" }}>
-                      <Icon
-                        name="tag"
-                        size={24}
-                        color={alpha(palette.text.light, 0.8)}
-                      />
-                      <Typography
-                        color={alpha(palette.text.light, 0.9)}
-                        fontWeight={400}
-                        fontFamily="Roboto"
+                  {!pathname.includes("workspace") && (
+                    <Box display="flex" gap="4rem" alignItems="center">
+                      <Box display="flex" gap="0.5rem" sx={{ width: "10rem" }}>
+                        <Icon
+                          name="tag"
+                          size={24}
+                          color={alpha(palette.text.light, 0.8)}
+                        />
+                        <Typography
+                          color={alpha(palette.text.light, 0.9)}
+                          fontWeight={400}
+                          fontFamily="Roboto"
+                        >
+                          Tag
+                        </Typography>
+                      </Box>
+                      <Box
+                        sx={{
+                          display: "inline-block",
+                          bgcolor: getColorByTag(task.tag),
+                          px: "1rem",
+                          borderRadius: "0.4rem",
+                          height: "1.8rem",
+                        }}
                       >
-                        Tag
-                      </Typography>
+                        <Typography
+                          variant="h6"
+                          lineHeight="1.8rem"
+                          color="#fff"
+                        >
+                          {task.tag}
+                        </Typography>
+                      </Box>
                     </Box>
-                    <Box
-                      sx={{
-                        display: "inline-block",
-                        bgcolor: getColorByTag(task.tag),
-                        px: "1rem",
-                        borderRadius: "0.4rem",
-                        height: "1.8rem",
-                      }}
-                    >
-                      <Typography variant="h6" lineHeight="1.8rem" color="#fff">
-                        {task.tag}
-                      </Typography>
-                    </Box>
-                  </Box>
+                  )}
                   {task.workspace != 0 && (
                     <Box display="flex" alignItems="center" gap="4rem">
                       <Box
@@ -456,7 +463,7 @@ const TaskDetailModal = ({ taskId, open, setOpen }) => {
                     <Typography
                       variant="h5"
                       fontWeight="500"
-                      sx={{ mt: "1rem" }}
+                      sx={{ mb: "1rem" }}
                     >
                       Attachment
                     </Typography>
@@ -502,7 +509,8 @@ const TaskDetailModal = ({ taskId, open, setOpen }) => {
                       {tab === 3 && (
                         <Evaluate
                           editable={task.assessor?.id === 1}
-                          evaluate={task.evaluate}
+                          evaluate={task.evaluate? task.evaluate : ""}
+                          setOpen={setOpen}
                         />
                       )}
                     </Suspense>
