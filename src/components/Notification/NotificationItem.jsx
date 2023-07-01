@@ -12,6 +12,7 @@ const NotificationItem = () => {
         p: "1rem",
         borderRadius: "1rem",
         cursor: "pointer",
+        bgcolor: palette.primary.light,
         "&:hover": {
           bgcolor: "rgba(0,0,0,0.05)",
         },

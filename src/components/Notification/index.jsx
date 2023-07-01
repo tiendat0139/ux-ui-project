@@ -1,5 +1,12 @@
 import { useState } from "react";
-import { Box, IconButton, Popover, Typography, useTheme } from "@mui/material";
+import {
+  Badge,
+  Box,
+  IconButton,
+  Popover,
+  Typography,
+  useTheme,
+} from "@mui/material";
 import Icon from "../Icons";
 import NotificationItem from "./NotificationItem";
 
@@ -21,14 +28,16 @@ const Notification = () => {
   return (
     <Box>
       <IconButton aria-describedby={id} onClick={handleClick}>
-        <Icon
-          name="alert"
-          size={16}
-          color={anchorEl ? palette.primary.main : palette.text.light}
-        />
+        <Badge variant="dot" color="primary">
+          <Icon
+            name="alert"
+            size={16}
+            color={anchorEl ? palette.primary.main : palette.text.light}
+          />
+        </Badge>
       </IconButton>
       <Popover
-        sx={{borderRadius: "100rem"}}
+        sx={{ borderRadius: "100rem" }}
         id={id}
         open={open}
         anchorEl={anchorEl}
@@ -42,7 +51,7 @@ const Notification = () => {
           horizontal: "center",
         }}
       >
-        <Box sx={{ p: "2rem 1rem"}}>
+        <Box sx={{ p: "2rem 1rem" }}>
           <Typography
             variant="h4"
             fontSize={22}

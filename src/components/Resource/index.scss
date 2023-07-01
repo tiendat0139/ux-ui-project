@@ -119,4 +119,11 @@
     padding: 0 6px;
     height: 100%;
 }
-
+.rct-outer {
+  max-height: 40rem !important;
+  overflow-y: scroll !important;
+  overflow-x: hidden !important;
+}
+.rct-scroll {
+  overflow-x: hidden !important;
+}

@@ -3,7 +3,7 @@ import { Box } from "@mui/material"
 
 const Gantt = () => {
   return(
-    <Box sx={{mt: "14rem"}}>
+    <Box sx={{mt: "13rem"}}>
       <Resource />
     </Box>
   )

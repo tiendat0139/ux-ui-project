@@ -816,7 +816,7 @@
           "workspaceName": "Software Engineering",
           "relatedUser": [1,2,3],
           "assignee": {
-            "id": 1,
+            "id": 2,
             "name": "Nguyen Duc Hoang",
             "email": "tiendat@gmail.com",
             "avatar": "/assets/1.png"
@@ -2178,7 +2178,7 @@
       "workspaceName": "Software Engineering",
       "relatedUser": [1,2,3],
       "assignee": {
-        "id": 1,
+        "id": 2,
         "name": "Nguyen Duc Hoang",
         "email": "tiendat@gmail.com",
         "avatar": "/assets/1.png"

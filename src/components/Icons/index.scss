@@ -46,6 +46,11 @@
   -webkit-mask-image: url("../../assets/img/board.svg");
   mask-image: url("../../assets/img/board.svg");
 }
+#double-arrow {
+  @include css-mask;
+  -webkit-mask-image: url("../../assets/img/double-arrow.svg");
+  mask-image: url("../../assets/img/double-arrow.svg");
+}
 #dashboard {
   @include css-mask;
   -webkit-mask-image: url("../../assets/img/dashboard.svg");

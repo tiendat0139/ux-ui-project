@@ -1,23 +1,9 @@
-import { useState, useEffect } from "react";
-import { Box, Typography, Avatar, useTheme, alpha } from "@mui/material";
+import { Box, Typography, useTheme, alpha } from "@mui/material";
 import Icon from "../Icons";
 import PropTypes from "prop-types";
 
-const TaskCard = ({ title, des, due, priority, workspaceId }) => {
+const DrawerCard = ({ title, des, due, priority }) => {
   const { palette } = useTheme();
-  const [workspace, setWorkspace] = useState();
-
-  useEffect(() => {
-    const fetchData = async () => {
-      const res = await fetch(
-        `http://localhost:3000/workspaces/${workspaceId}`
-      );
-      const data = await res.json();
-      setWorkspace(data);
-    };
-    fetchData();
-  }, [workspaceId]);
-
   return (
     <Box
       display="flex"
@@ -84,49 +70,25 @@ const TaskCard = ({ title, des, due, priority, workspaceId }) => {
             8 hours
           </Typography>
         </Box>
-      </Box>
-      <Box display="flex" justifyContent="space-between" alignItems="center">
-        <Box display="flex" alignItems="center" gap="0.4rem">
-          <Avatar
-            sx={{ width: "2rem", height: "2rem" }}
-            src={workspace?.avatar}
-          />
-          <Typography variant="h6" color={palette.text.light}>
-            {workspace?.name}
-          </Typography>
-        </Box>
-        <Box display="flex" gap="1.6rem">
-          <Box display="flex" gap="0.4rem">
-            <Icon name="comment" size={24} />
-            <Typography
-              variant="h6"
-              fontFamily="Roboto"
-              color={palette.text.light}
-              fontWeight={400}
-            >
-              3
-            </Typography>
-          </Box>
-          {priority == "high" && (
-            <Icon name="up-filled" size={22} type="filled" />
-          )}
-          {priority == "normal" && (
-            <Icon name="equal-filled" size={22} type="filled" />
-          )}
-          {priority == "low" && (
-            <Icon name="down-filled" size={24} type="filled" />
-          )}
-        </Box>
+        {priority == "high" && (
+          <Icon name="up-filled" size={22} type="filled" />
+        )}
+        {priority == "normal" && (
+          <Icon name="equal-filled" size={22} type="filled" />
+        )}
+        {priority == "low" && (
+          <Icon name="down-filled" size={24} type="filled" />
+        )}
       </Box>
     </Box>
   );
 };
 
-TaskCard.propTypes = {
+DrawerCard.propTypes = {
   title: PropTypes.string,
   des: PropTypes.string,
   due: PropTypes.string,
   priority: PropTypes.string,
   workspaceId: PropTypes.string,
 };
-export default TaskCard;
+export default DrawerCard;
