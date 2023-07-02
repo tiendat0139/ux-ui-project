@@ -5,6 +5,7 @@
   --fc-button-active-bg-color: #083AA9;
   --fc-button-hover-bg-color: #F1F5F9;
   --fc-button-text-color: #000;
+  --fc-highlight-color: #e6f2ff;
 }
 // Header css overide
 .fc .fc-toolbar.fc-header-toolbar {
@@ -174,4 +175,7 @@ table {
 .fc-event-time, .fc-event-title {
   padding: 0 1px;
   white-space: normal;
-  }
+}
+.fc-highlight{
+
+}

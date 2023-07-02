@@ -163,14 +163,18 @@
           "tag": "project",
           "workspace": "1",
           "workspaceName": "ITSS Project",
-          "relatedUser": [1,2,3],
+          "relatedUser": [
+            1,
+            2,
+            3
+          ],
           "assignee": {
             "id": 1,
             "name": "Nguyen Tien Dat",
             "email": "tiendat@gmail.com",
             "avatar": "/assets/1.png"
           },
-          "assessor":{
+          "assessor": {
             "id": 2,
             "name": "Nguyen Duc Hoang",
             "email": "hoangnd@gmail.com",
@@ -223,7 +227,11 @@
           "tag": "project",
           "workspace": "1",
           "workspaceName": "ITSS Project",
-          "relatedUser": [1,2,3],
+          "relatedUser": [
+            1,
+            2,
+            3
+          ],
           "assignee": {
             "id": 3,
             "name": "Hoang The Anh",
@@ -285,18 +293,22 @@
           "tag": "project",
           "workspace": "1",
           "workspaceName": "ITSS Project",
-          "relatedUser": [1,3,4],
-          "assignee": {        
+          "relatedUser": [
+            1,
+            3,
+            4
+          ],
+          "assignee": {
             "id": 2,
             "name": "Nguyen Duc Hoang",
             "email": "hoangnd@gmail.com",
-            "avatar": "/assets/2.png"   
+            "avatar": "/assets/2.png"
           },
           "assessor": {
             "id": 1,
             "name": "Nguyen Tien Dat",
             "email": "tiendat@gmail.com",
-            "avatar": "/assets/1.png"  
+            "avatar": "/assets/1.png"
           },
           "reminder": "false",
           "checklist": [
@@ -338,7 +350,7 @@
             }
           ],
           "evalutate": {}
-        },  
+        },
         {
           "id": "13",
           "name": "Write unit test",
@@ -350,8 +362,12 @@
           "tag": "project",
           "workspace": "1",
           "workspaceName": "ITSS Project",
-          "relatedUser": [2,3,4],
-          "assignee":  {
+          "relatedUser": [
+            2,
+            3,
+            4
+          ],
+          "assignee": {
             "id": 3,
             "name": "Hoang The Anh",
             "email": "hoangnd@gmail.com",
@@ -361,7 +377,7 @@
             "id": 1,
             "name": "Nguyen Tien Dat",
             "email": "tiendat@gmail.com",
-            "avatar": "/assets/1.png"  
+            "avatar": "/assets/1.png"
           },
           "reminder": "false",
           "checklist": [
@@ -399,8 +415,12 @@
           "tag": "project",
           "workspace": "1",
           "workspaceName": "ITSS Project",
-          "relatedUser": [2,3,4],
-          "assignee":  {
+          "relatedUser": [
+            2,
+            3,
+            4
+          ],
+          "assignee": {
             "id": 2,
             "name": "Nguyen Duc Hoang",
             "email": "hoangnd@gmail.com",
@@ -410,7 +430,7 @@
             "id": 1,
             "name": "Nguyen Tien Dat",
             "email": "tiendat@gmail.com",
-            "avatar": "/assets/1.png"  
+            "avatar": "/assets/1.png"
           },
           "reminder": "false",
           "checklist": [
@@ -460,7 +480,11 @@
           "tag": "project",
           "workspace": "1",
           "workspaceName": "ITSS Project",
-          "relatedUser": [1,3,4],
+          "relatedUser": [
+            1,
+            3,
+            4
+          ],
           "assignee": {
             "id": 1,
             "name": "Nguyen Tien Dat",
@@ -471,7 +495,7 @@
             "id": 4,
             "name": "Pham Xuan Duy",
             "email": "duypx@gmail.com",
-            "avatar": "/assets/4.png"  
+            "avatar": "/assets/4.png"
           },
           "reminder": "false",
           "checklist": [
@@ -517,7 +541,11 @@
           "tag": "project",
           "workspace": "1",
           "workspaceName": "ITSS Project",
-          "relatedUser": [1,3,4],
+          "relatedUser": [
+            1,
+            3,
+            4
+          ],
           "assignee": {
             "id": 1,
             "name": "Nguyen Tien Dat",
@@ -528,9 +556,8 @@
             "id": 2,
             "name": "Nguyen Duc Hoang",
             "email": "hoangnd@gmail.com",
-            "avatar": "/assets/2.png"  
+            "avatar": "/assets/2.png"
           },
-          
           "reminder": "false",
           "checklist": [
             {
@@ -618,7 +645,11 @@
           "tag": "project",
           "workspace": "2",
           "workspaceName": "UX UI Design",
-          "relatedUser": [1,3,4],
+          "relatedUser": [
+            1,
+            3,
+            4
+          ],
           "assignee": {
             "id": 1,
             "name": "Nguyen Tien Dat",
@@ -629,9 +660,8 @@
             "id": 2,
             "name": "Nguyen Duc Hoang",
             "email": "hoangnd@gmail.com",
-            "avatar": "/assets/2.png"  
+            "avatar": "/assets/2.png"
           },
-          
           "reminder": "false",
           "checklist": [
             {
@@ -674,7 +704,11 @@
           "tag": "project",
           "workspace": "2",
           "workspaceName": "UX UI Design",
-          "relatedUser": [1,3,4],
+          "relatedUser": [
+            1,
+            3,
+            4
+          ],
           "assignee": {
             "id": 1,
             "name": "Nguyen Tien Dat",
@@ -685,9 +719,8 @@
             "id": 2,
             "name": "Nguyen Duc Hoang",
             "email": "hoangnd@gmail.com",
-            "avatar": "/assets/2.png"  
+            "avatar": "/assets/2.png"
           },
-          
           "reminder": "false",
           "checklist": [
             {
@@ -726,7 +759,11 @@
           "tag": "project",
           "workspace": "2",
           "workspaceName": "UX UI Design",
-          "relatedUser": [1,3,4],
+          "relatedUser": [
+            1,
+            3,
+            4
+          ],
           "assignee": {
             "id": 1,
             "name": "Nguyen Tien Dat",
@@ -737,9 +774,8 @@
             "id": 2,
             "name": "Nguyen Duc Hoang",
             "email": "hoangnd@gmail.com",
-            "avatar": "/assets/2.png"  
+            "avatar": "/assets/2.png"
           },
-          
           "reminder": "false",
           "checklist": [
             {
@@ -814,14 +850,18 @@
           "tag": "project",
           "workspace": "3",
           "workspaceName": "Software Engineering",
-          "relatedUser": [1,2,3],
+          "relatedUser": [
+            1,
+            2,
+            3
+          ],
           "assignee": {
             "id": 2,
             "name": "Nguyen Duc Hoang",
             "email": "tiendat@gmail.com",
             "avatar": "/assets/1.png"
           },
-          "assessor":{
+          "assessor": {
             "id": 3,
             "name": "Hoang The Anh",
             "email": "hoangnd@gmail.com",
@@ -874,7 +914,11 @@
           "tag": "project",
           "workspace": "3",
           "workspaceName": "Software Engineering",
-          "relatedUser": [1,2,3],
+          "relatedUser": [
+            1,
+            2,
+            3
+          ],
           "assignee": {
             "id": 3,
             "name": "Hoang The Anh",
@@ -936,18 +980,22 @@
           "tag": "project",
           "workspace": "3",
           "workspaceName": "Software Engineering",
-          "relatedUser": [1,3,4],
-          "assignee": {        
+          "relatedUser": [
+            1,
+            3,
+            4
+          ],
+          "assignee": {
             "id": 2,
             "name": "Nguyen Duc Hoang",
             "email": "hoangnd@gmail.com",
-            "avatar": "/assets/2.png"   
+            "avatar": "/assets/2.png"
           },
           "assessor": {
             "id": 3,
             "name": "Hoang The Anh",
             "email": "anhnd@gmail.com",
-            "avatar": "/assets/1.png"  
+            "avatar": "/assets/1.png"
           },
           "reminder": "false",
           "checklist": [
@@ -989,7 +1037,7 @@
             }
           ],
           "evalutate": {}
-        },  
+        },
         {
           "id": "23",
           "name": "Write unit test",
@@ -1001,8 +1049,12 @@
           "tag": "project",
           "workspace": "3",
           "workspaceName": "Software Engineering",
-          "relatedUser": [2,3,4],
-          "assignee":  {
+          "relatedUser": [
+            2,
+            3,
+            4
+          ],
+          "assignee": {
             "id": 3,
             "name": "Hoang The Anh",
             "email": "hoangnd@gmail.com",
@@ -1012,7 +1064,7 @@
             "id": 4,
             "name": "Pham Xuan Duy",
             "email": "duypx@gmail.com",
-            "avatar": "/assets/1.png"  
+            "avatar": "/assets/1.png"
           },
           "reminder": "false",
           "checklist": [
@@ -1050,8 +1102,12 @@
           "tag": "project",
           "workspace": "3",
           "workspaceName": "Software Engineering",
-          "relatedUser": [2,3,4],
-          "assignee":  {
+          "relatedUser": [
+            2,
+            3,
+            4
+          ],
+          "assignee": {
             "id": 2,
             "name": "Nguyen Duc Hoang",
             "email": "hoangnd@gmail.com",
@@ -1061,7 +1117,7 @@
             "id": 4,
             "name": "Pham Xuan Duy",
             "email": "duypx@gmail.com",
-            "avatar": "/assets/1.png"  
+            "avatar": "/assets/1.png"
           },
           "reminder": "false",
           "checklist": [
@@ -1111,7 +1167,11 @@
           "tag": "project",
           "workspace": "3",
           "workspaceName": "Software Engineering",
-          "relatedUser": [1,3,4],
+          "relatedUser": [
+            1,
+            3,
+            4
+          ],
           "assignee": {
             "id": 3,
             "name": "Hoang The Anh",
@@ -1122,7 +1182,7 @@
             "id": 4,
             "name": "Pham Xuan Duy",
             "email": "duypx@gmail.com",
-            "avatar": "/assets/4.png"  
+            "avatar": "/assets/4.png"
           },
           "reminder": "false",
           "checklist": [
@@ -1168,7 +1228,11 @@
           "tag": "project",
           "workspace": "3",
           "workspaceName": "Software Engineering",
-          "relatedUser": [1,3,4],
+          "relatedUser": [
+            1,
+            3,
+            4
+          ],
           "assignee": {
             "id": 2,
             "name": "Pham Xuan Duy",
@@ -1179,9 +1243,8 @@
             "id": 2,
             "name": "Nguyen Duc Hoang",
             "email": "hoangnd@gmail.com",
-            "avatar": "/assets/2.png"  
+            "avatar": "/assets/2.png"
           },
-          
           "reminder": "false",
           "checklist": [
             {
@@ -1230,20 +1293,23 @@
           "tag": "project",
           "workspace": "3",
           "workspaceName": "Software Engineering",
-          "relatedUser": [1,3,4],
+          "relatedUser": [
+            1,
+            3,
+            4
+          ],
           "assignee": {
             "id": 0,
             "name": "Unassigneed",
             "email": "bot@gmail.com",
-            "avatar": "/assets/no.png"  
+            "avatar": "/assets/no.png"
           },
           "assessor": {
             "id": 2,
             "name": "Nguyen Duc Hoang",
             "email": "hoangnd@gmail.com",
-            "avatar": "/assets/2.png"  
+            "avatar": "/assets/2.png"
           },
-          
           "reminder": "false",
           "checklist": [
             {
@@ -1288,18 +1354,22 @@
           "tag": "project",
           "workspace": "3",
           "workspaceName": "Software Engineering",
-          "relatedUser": [1,3,4],
+          "relatedUser": [
+            1,
+            3,
+            4
+          ],
           "assignee": {
             "id": 0,
             "name": "Unassigneed",
             "email": "bot@gmail.com",
-            "avatar": "/assets/no.png"  
+            "avatar": "/assets/no.png"
           },
           "assessor": {
             "id": 2,
             "name": "Nguyen Duc Hoang",
             "email": "hoangnd@gmail.com",
-            "avatar": "/assets/2.png"  
+            "avatar": "/assets/2.png"
           },
           "reminder": "false",
           "checklist": [
@@ -1377,11 +1447,11 @@
       "workspace": "0",
       "workspaceName": "Personal",
       "assignee": {
-      "id": 1,
-      "name": "Nguyen Tien Dat",
-      "email": "tiendat@gmail.com",
-      "avatar": "/assets/1.png"
-    },
+        "id": 1,
+        "name": "Nguyen Tien Dat",
+        "email": "tiendat@gmail.com",
+        "avatar": "/assets/1.png"
+      },
       "recurring": "weekly",
       "reminder": "false"
     },
@@ -1397,11 +1467,31 @@
       "workspace": "0",
       "workspaceName": "Personal",
       "assignee": {
-      "id": 1,
-      "name": "Nguyen Tien Dat",
-      "email": "tiendat@gmail.com",
-      "avatar": "/assets/1.png"
+        "id": 1,
+        "name": "Nguyen Tien Dat",
+        "email": "tiendat@gmail.com",
+        "avatar": "/assets/1.png"
+      },
+      "recurring": "weekly",
+      "reminder": "false"
     },
+    {
+      "id": "2.2",
+      "name": "Play badmintion",
+      "start": "2023-07-04T08:30",
+      "end": "2023-07-04T09:50",
+      "des": "Play badminton with club members at stadium",
+      "status": "Close",
+      "priority": "low",
+      "tag": "sport",
+      "workspace": "0",
+      "workspaceName": "Personal",
+      "assignee": {
+        "id": 1,
+        "name": "Nguyen Tien Dat",
+        "email": "tiendat@gmail.com",
+        "avatar": "/assets/1.png"
+      },
       "recurring": "weekly",
       "reminder": "false"
     },
@@ -1417,11 +1507,11 @@
       "workspace": "0",
       "workspaceName": "Personal",
       "assignee": {
-      "id": 1,
-      "name": "Nguyen Tien Dat",
-      "email": "tiendat@gmail.com",
-      "avatar": "/assets/1.png"
-    },
+        "id": 1,
+        "name": "Nguyen Tien Dat",
+        "email": "tiendat@gmail.com",
+        "avatar": "/assets/1.png"
+      },
       "recurring": "weekly",
       "reminder": "false",
       "source": "2"
@@ -1438,11 +1528,11 @@
       "workspace": "0",
       "workspaceName": "Personal",
       "assignee": {
-      "id": 1,
-      "name": "Nguyen Tien Dat",
-      "email": "tiendat@gmail.com",
-      "avatar": "/assets/1.png"
-    },
+        "id": 1,
+        "name": "Nguyen Tien Dat",
+        "email": "tiendat@gmail.com",
+        "avatar": "/assets/1.png"
+      },
       "recurring": "weekly",
       "reminder": "false",
       "source": "1"
@@ -1459,11 +1549,11 @@
       "workspace": "0",
       "workspaceName": "Personal",
       "assignee": {
-      "id": 1,
-      "name": "Nguyen Tien Dat",
-      "email": "tiendat@gmail.com",
-      "avatar": "/assets/1.png"
-    },
+        "id": 1,
+        "name": "Nguyen Tien Dat",
+        "email": "tiendat@gmail.com",
+        "avatar": "/assets/1.png"
+      },
       "recurring": "weekly",
       "reminder": "false",
       "source": "1"
@@ -1480,11 +1570,11 @@
       "workspace": "0",
       "workspaceName": "Personal",
       "assignee": {
-      "id": 1,
-      "name": "Nguyen Tien Dat",
-      "email": "tiendat@gmail.com",
-      "avatar": "/assets/1.png"
-    },
+        "id": 1,
+        "name": "Nguyen Tien Dat",
+        "email": "tiendat@gmail.com",
+        "avatar": "/assets/1.png"
+      },
       "recurring": "weekly",
       "reminder": "false",
       "source": "1"
@@ -1501,11 +1591,11 @@
       "workspaceName": "Personal",
       "workspace": "0",
       "assignee": {
-      "id": 1,
-      "name": "Nguyen Tien Dat",
-      "email": "tiendat@gmail.com",
-      "avatar": "/assets/1.png"
-    },
+        "id": 1,
+        "name": "Nguyen Tien Dat",
+        "email": "tiendat@gmail.com",
+        "avatar": "/assets/1.png"
+      },
       "recurring": "weekly",
       "reminder": "false",
       "source": "1"
@@ -1522,11 +1612,11 @@
       "workspaceName": "Personal",
       "workspace": "0",
       "assignee": {
-      "id": 1,
-      "name": "Nguyen Tien Dat",
-      "email": "tiendat@gmail.com",
-      "avatar": "/assets/1.png"
-    },
+        "id": 1,
+        "name": "Nguyen Tien Dat",
+        "email": "tiendat@gmail.com",
+        "avatar": "/assets/1.png"
+      },
       "recurring": "weekly",
       "reminder": "false"
     },
@@ -1542,11 +1632,11 @@
       "workspaceName": "Personal",
       "workspace": "0",
       "assignee": {
-      "id": 1,
-      "name": "Nguyen Tien Dat",
-      "email": "tiendat@gmail.com",
-      "avatar": "/assets/1.png"
-    },
+        "id": 1,
+        "name": "Nguyen Tien Dat",
+        "email": "tiendat@gmail.com",
+        "avatar": "/assets/1.png"
+      },
       "recurring": "weekly",
       "reminder": "false",
       "source": "1"
@@ -1563,11 +1653,11 @@
       "workspace": "0",
       "workspaceName": "Personal",
       "assignee": {
-      "id": 1,
-      "name": "Nguyen Tien Dat",
-      "email": "tiendat@gmail.com",
-      "avatar": "/assets/1.png"
-    },
+        "id": 1,
+        "name": "Nguyen Tien Dat",
+        "email": "tiendat@gmail.com",
+        "avatar": "/assets/1.png"
+      },
       "recurring": "weekly",
       "reminder": "false",
       "source": "1"
@@ -1584,11 +1674,11 @@
       "workspace": "0",
       "workspaceName": "Personal",
       "assignee": {
-      "id": 1,
-      "name": "Nguyen Tien Dat",
-      "email": "tiendat@gmail.com",
-      "avatar": "/assets/1.png"
-    },
+        "id": 1,
+        "name": "Nguyen Tien Dat",
+        "email": "tiendat@gmail.com",
+        "avatar": "/assets/1.png"
+      },
       "recurring": "weekly",
       "reminder": "false",
       "source": "2"
@@ -1604,14 +1694,18 @@
       "tag": "project",
       "workspace": "1",
       "workspaceName": "ITSS Project",
-      "relatedUser": [1,2,3],
+      "relatedUser": [
+        1,
+        2,
+        3
+      ],
       "assignee": {
         "id": 1,
         "name": "Nguyen Tien Dat",
         "email": "tiendat@gmail.com",
         "avatar": "/assets/1.png"
       },
-      "assessor":{
+      "assessor": {
         "id": 2,
         "name": "Nguyen Duc Hoang",
         "email": "hoangnd@gmail.com",
@@ -1664,7 +1758,11 @@
       "tag": "project",
       "workspace": "1",
       "workspaceName": "ITSS Project",
-      "relatedUser": [1,2,3],
+      "relatedUser": [
+        1,
+        2,
+        3
+      ],
       "assignee": {
         "id": 3,
         "name": "Hoang The Anh",
@@ -1726,18 +1824,22 @@
       "tag": "project",
       "workspace": "1",
       "workspaceName": "ITSS Project",
-      "relatedUser": [1,3,4],
-      "assignee": {        
+      "relatedUser": [
+        1,
+        3,
+        4
+      ],
+      "assignee": {
         "id": 2,
         "name": "Nguyen Duc Hoang",
         "email": "hoangnd@gmail.com",
-        "avatar": "/assets/2.png"   
+        "avatar": "/assets/2.png"
       },
       "assessor": {
         "id": 1,
         "name": "Nguyen Tien Dat",
         "email": "tiendat@gmail.com",
-        "avatar": "/assets/1.png"  
+        "avatar": "/assets/1.png"
       },
       "reminder": "false",
       "checklist": [
@@ -1779,7 +1881,7 @@
         }
       ],
       "evalutate": {}
-    },  
+    },
     {
       "id": "13",
       "name": "Write unit test",
@@ -1791,8 +1893,12 @@
       "tag": "project",
       "workspace": "1",
       "workspaceName": "ITSS Project",
-      "relatedUser": [2,3,4],
-      "assignee":  {
+      "relatedUser": [
+        2,
+        3,
+        4
+      ],
+      "assignee": {
         "id": 3,
         "name": "Hoang The Anh",
         "email": "hoangnd@gmail.com",
@@ -1802,7 +1908,7 @@
         "id": 1,
         "name": "Nguyen Tien Dat",
         "email": "tiendat@gmail.com",
-        "avatar": "/assets/1.png"  
+        "avatar": "/assets/1.png"
       },
       "reminder": "false",
       "checklist": [
@@ -1840,8 +1946,12 @@
       "tag": "project",
       "workspace": "1",
       "workspaceName": "ITSS Project",
-      "relatedUser": [2,3,4],
-      "assignee":  {
+      "relatedUser": [
+        2,
+        3,
+        4
+      ],
+      "assignee": {
         "id": 2,
         "name": "Nguyen Duc Hoang",
         "email": "hoangnd@gmail.com",
@@ -1851,7 +1961,7 @@
         "id": 1,
         "name": "Nguyen Tien Dat",
         "email": "tiendat@gmail.com",
-        "avatar": "/assets/1.png"  
+        "avatar": "/assets/1.png"
       },
       "reminder": "false",
       "checklist": [
@@ -1901,7 +2011,11 @@
       "tag": "project",
       "workspace": "1",
       "workspaceName": "ITSS Project",
-      "relatedUser": [1,3,4],
+      "relatedUser": [
+        1,
+        3,
+        4
+      ],
       "assessor": {
         "id": 1,
         "name": "Nguyen Tien Dat",
@@ -1912,7 +2026,7 @@
         "id": 4,
         "name": "Pham Xuan Duy",
         "email": "duypx@gmail.com",
-        "avatar": "/assets/4.png"  
+        "avatar": "/assets/4.png"
       },
       "reminder": "false",
       "checklist": [
@@ -1953,12 +2067,16 @@
       "des": "Create homepage follows the design and match API",
       "status": "In progress",
       "start": "2023-07-02T17:30",
-      "end": "2023-07-05T17:30",
+      "end": "2023-07-03T12:30",
       "priority": "normal",
       "tag": "project",
       "workspace": "1",
       "workspaceName": "ITSS Project",
-      "relatedUser": [1,3,4],
+      "relatedUser": [
+        1,
+        3,
+        4
+      ],
       "assignee": {
         "id": 1,
         "name": "Nguyen Tien Dat",
@@ -1969,9 +2087,8 @@
         "id": 2,
         "name": "Nguyen Duc Hoang",
         "email": "hoangnd@gmail.com",
-        "avatar": "/assets/2.png"  
+        "avatar": "/assets/2.png"
       },
-      
       "reminder": "false",
       "checklist": [
         {
@@ -2020,7 +2137,11 @@
       "tag": "project",
       "workspace": "2",
       "workspaceName": "UX UI Design",
-      "relatedUser": [1,3,4],
+      "relatedUser": [
+        1,
+        3,
+        4
+      ],
       "assignee": {
         "id": 1,
         "name": "Nguyen Tien Dat",
@@ -2031,9 +2152,8 @@
         "id": 2,
         "name": "Nguyen Duc Hoang",
         "email": "hoangnd@gmail.com",
-        "avatar": "/assets/2.png"  
+        "avatar": "/assets/2.png"
       },
-      
       "reminder": "false",
       "checklist": [
         {
@@ -2076,7 +2196,11 @@
       "tag": "project",
       "workspace": "2",
       "workspaceName": "UX UI Design",
-      "relatedUser": [1,3,4],
+      "relatedUser": [
+        1,
+        3,
+        4
+      ],
       "assignee": {
         "id": 1,
         "name": "Nguyen Tien Dat",
@@ -2087,9 +2211,8 @@
         "id": 2,
         "name": "Nguyen Duc Hoang",
         "email": "hoangnd@gmail.com",
-        "avatar": "/assets/2.png"  
+        "avatar": "/assets/2.png"
       },
-      
       "reminder": "false",
       "checklist": [
         {
@@ -2128,7 +2251,11 @@
       "tag": "project",
       "workspace": "2",
       "workspaceName": "UX UI Design",
-      "relatedUser": [1,3,4],
+      "relatedUser": [
+        1,
+        3,
+        4
+      ],
       "assignee": {
         "id": 1,
         "name": "Nguyen Tien Dat",
@@ -2139,9 +2266,8 @@
         "id": 2,
         "name": "Nguyen Duc Hoang",
         "email": "hoangnd@gmail.com",
-        "avatar": "/assets/2.png"  
+        "avatar": "/assets/2.png"
       },
-      
       "reminder": "false",
       "checklist": [
         {
@@ -2176,14 +2302,18 @@
       "tag": "project",
       "workspace": "3",
       "workspaceName": "Software Engineering",
-      "relatedUser": [1,2,3],
+      "relatedUser": [
+        1,
+        2,
+        3
+      ],
       "assignee": {
         "id": 2,
         "name": "Nguyen Duc Hoang",
         "email": "tiendat@gmail.com",
         "avatar": "/assets/1.png"
       },
-      "assessor":{
+      "assessor": {
         "id": 3,
         "name": "Hoang The Anh",
         "email": "hoangnd@gmail.com",
@@ -2236,7 +2366,11 @@
       "tag": "project",
       "workspace": "3",
       "workspaceName": "Software Engineering",
-      "relatedUser": [1,2,3],
+      "relatedUser": [
+        1,
+        2,
+        3
+      ],
       "assignee": {
         "id": 3,
         "name": "Hoang The Anh",
@@ -2298,18 +2432,22 @@
       "tag": "project",
       "workspace": "3",
       "workspaceName": "Software Engineering",
-      "relatedUser": [1,3,4],
-      "assignee": {        
+      "relatedUser": [
+        1,
+        3,
+        4
+      ],
+      "assignee": {
         "id": 2,
         "name": "Nguyen Duc Hoang",
         "email": "hoangnd@gmail.com",
-        "avatar": "/assets/2.png"   
+        "avatar": "/assets/2.png"
       },
       "assessor": {
         "id": 3,
         "name": "Hoang The Anh",
         "email": "anhnd@gmail.com",
-        "avatar": "/assets/1.png"  
+        "avatar": "/assets/1.png"
       },
       "reminder": "false",
       "checklist": [
@@ -2351,7 +2489,7 @@
         }
       ],
       "evalutate": {}
-    },  
+    },
     {
       "id": "23",
       "name": "Write unit test",
@@ -2363,8 +2501,12 @@
       "tag": "project",
       "workspace": "3",
       "workspaceName": "Software Engineering",
-      "relatedUser": [2,3,4],
-      "assignee":  {
+      "relatedUser": [
+        2,
+        3,
+        4
+      ],
+      "assignee": {
         "id": 3,
         "name": "Hoang The Anh",
         "email": "hoangnd@gmail.com",
@@ -2374,7 +2516,7 @@
         "id": 4,
         "name": "Pham Xuan Duy",
         "email": "duypx@gmail.com",
-        "avatar": "/assets/1.png"  
+        "avatar": "/assets/1.png"
       },
       "reminder": "false",
       "checklist": [
@@ -2412,8 +2554,12 @@
       "tag": "project",
       "workspace": "3",
       "workspaceName": "Software Engineering",
-      "relatedUser": [2,3,4],
-      "assignee":  {
+      "relatedUser": [
+        2,
+        3,
+        4
+      ],
+      "assignee": {
         "id": 2,
         "name": "Nguyen Duc Hoang",
         "email": "hoangnd@gmail.com",
@@ -2423,7 +2569,7 @@
         "id": 4,
         "name": "Pham Xuan Duy",
         "email": "duypx@gmail.com",
-        "avatar": "/assets/1.png"  
+        "avatar": "/assets/1.png"
       },
       "reminder": "false",
       "checklist": [
@@ -2473,7 +2619,11 @@
       "tag": "project",
       "workspace": "3",
       "workspaceName": "Software Engineering",
-      "relatedUser": [1,3,4],
+      "relatedUser": [
+        1,
+        3,
+        4
+      ],
       "assignee": {
         "id": 3,
         "name": "Hoang The Anh",
@@ -2484,7 +2634,7 @@
         "id": 4,
         "name": "Pham Xuan Duy",
         "email": "duypx@gmail.com",
-        "avatar": "/assets/4.png"  
+        "avatar": "/assets/4.png"
       },
       "reminder": "false",
       "checklist": [
@@ -2530,7 +2680,11 @@
       "tag": "project",
       "workspace": "3",
       "workspaceName": "Software Engineering",
-      "relatedUser": [1,3,4],
+      "relatedUser": [
+        1,
+        3,
+        4
+      ],
       "assignee": {
         "id": 2,
         "name": "Pham Xuan Duy",
@@ -2541,9 +2695,8 @@
         "id": 2,
         "name": "Nguyen Duc Hoang",
         "email": "hoangnd@gmail.com",
-        "avatar": "/assets/2.png"  
+        "avatar": "/assets/2.png"
       },
-      
       "reminder": "false",
       "checklist": [
         {
@@ -2588,20 +2741,23 @@
       "tag": "project",
       "workspace": "3",
       "workspaceName": "Software Engineering",
-      "relatedUser": [1,3,4],
+      "relatedUser": [
+        1,
+        3,
+        4
+      ],
       "assignee": {
         "id": 0,
         "name": "Unassigneed",
         "email": "bot@gmail.com",
-        "avatar": "/assets/no.png"  
+        "avatar": "/assets/no.png"
       },
       "assessor": {
         "id": 2,
         "name": "Nguyen Duc Hoang",
         "email": "hoangnd@gmail.com",
-        "avatar": "/assets/2.png"  
+        "avatar": "/assets/2.png"
       },
-      
       "reminder": "false",
       "checklist": [
         {
@@ -2646,18 +2802,22 @@
       "tag": "project",
       "workspace": "3",
       "workspaceName": "Software Engineering",
-      "relatedUser": [1,3,4],
+      "relatedUser": [
+        1,
+        3,
+        4
+      ],
       "assignee": {
         "id": 0,
         "name": "Unassigneed",
         "email": "bot@gmail.com",
-        "avatar": "/assets/no.png"  
+        "avatar": "/assets/no.png"
       },
       "assessor": {
         "id": 2,
         "name": "Nguyen Duc Hoang",
         "email": "hoangnd@gmail.com",
-        "avatar": "/assets/2.png"  
+        "avatar": "/assets/2.png"
       },
       "reminder": "false",
       "checklist": [

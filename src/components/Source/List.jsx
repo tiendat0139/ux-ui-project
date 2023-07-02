@@ -19,6 +19,11 @@ import Icon from "../Icons";
 
 const List = () => {
   const { palette } = useTheme();
+  const getStatusColor = (status) => {
+    if(status === "Connected") return ["#b9f6ca", "#00c853"];
+    if(status === "Pending") return ["#fff59d", "#f9a825"];
+    if(status === "Failed") return ["#ffab91", "#d84315"];
+  }
   const rows = [
     {
       name: "eHust",
@@ -106,7 +111,21 @@ const List = () => {
                       ></Icon>
                     </IconButton>
                   </TableCell>
-                  <TableCell>{row.status}</TableCell>
+                  <TableCell>
+                    <Box
+                      sx={{
+                        width: "10rem",
+                        py: "0.1rem",
+                        bgcolor: getStatusColor(row.status)[0],
+                        color: getStatusColor(row.status)[1],
+                        fontWeight: 500,
+                        textAlign: "center",
+                        borderRadius: "10rem",
+                      }}
+                    >
+                      {row.status}
+                    </Box>
+                  </TableCell>
                   <TableCell>{row.updated}</TableCell>
                   <TableCell>
                     <Box display="flex" gap="2rem">

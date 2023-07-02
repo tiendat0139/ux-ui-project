@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { Box, Button, IconButton } from "@mui/material";
+import { Box, Button, IconButton, alpha } from "@mui/material";
 import moment from "moment";
 import Timeline, {
   TimelineHeaders,
@@ -127,15 +127,24 @@ const Resource = () => {
     <Box sx={{ position: "relative" }}>
       <Box>
         <Box sx={{ textAlign: "right", mb: "1rem" }}>
-          <Button variant="outlined" onClick={handleShareTime}>
-            {!shared ? "Share time" : "Undo share time"}
-          </Button>
+          {id === 3 ? (
+            <Button variant="outlined" onClick={handleShareTime}>
+              {!shared ? "Share time" : "Undo share time"}
+            </Button>
+          ) : (
+            <Button variant="outlined" onClick={handleShareTime}>
+              {!shared ? "Show free time" : "Hide free time"}
+            </Button>
+          )}
           <IconButton
             sx={{
-              bgcolor: "rgba(0,0,0,0.1)",
+              bgcolor: "#e7ebef",
+              "&:hover": {
+                bgcolor: alpha("#e7ebef", 0.8),
+              },
               ml: "1rem",
               transform: openDrawer ? "rotate(-180deg)" : "",
-              transition: "transform 0.4s"
+              transition: "transform 0.4s",
             }}
             onClick={() => setOpenDrawer((prev) => !prev)}
           >

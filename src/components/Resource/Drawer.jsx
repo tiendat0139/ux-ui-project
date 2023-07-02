@@ -1,13 +1,15 @@
+import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { Box, Typography } from "@mui/material";
+import { Avatar, Box, Typography } from "@mui/material";
 import DrawerCard from "./DrawerCard";
 import PropTypes from "prop-types";
-import { useParams } from "react-router-dom";
+import noMember from "../../assets/img/avatar/no.png";
+import { useTheme } from "@emotion/react";
 
 const Drawer = ({ open }) => {
   const { id } = useParams();
   const [tasks, setTasks] = useState([]);
-
+  const {palette} = useTheme();
   useEffect(() => {
     const fetchData = async () => {
       const res = await fetch(
@@ -35,9 +37,17 @@ const Drawer = ({ open }) => {
         transition: "right 0.4s ease-in-out",
       }}
     >
-      <Typography variant="h4" fontWeight={500} sx={{ mb: "2rem", px: "1rem" }}>
-        Unassigned Tasks
-      </Typography>
+      <Box display="flex" alignItems="center" gap="1rem" sx={{mb: "2rem"}}>
+        <Avatar src={noMember} sx={{width: "3rem", height: "3rem"}} />
+        <Typography
+          variant="h5"
+          fontSize={20}
+          fontWeight={500}
+          color={palette.text.light}
+        >
+          Unassigned Tasks
+        </Typography>
+      </Box>
       {tasks.map((task) => (
         <DrawerCard
           key={task.id}

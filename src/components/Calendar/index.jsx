@@ -8,11 +8,14 @@ import { useEffect, useState } from "react";
 import { Box, Typography } from "@mui/material";
 import Icon from "../Icons";
 import TaskDetailModal from "../Modal/TaskDetailModal";
+import CreateModal from "./CreateModal";
 
 const DayView = () => {
   const [events, setEvents] = useState([]);
   const [openModal, setOpenModal] = useState(false);
   const [selectedTaskId, setSelectedTaskId] = useState();
+  const [openCreateTaskModal, setOpenCreateTaskModal] = useState(false);
+  const [selectedData, setSelectedData] = useState({});
 
   const getFormatTime = (time) => {
     return (
@@ -76,6 +79,15 @@ const DayView = () => {
     setSelectedTaskId(info.event._def.publicId);
     setOpenModal(true);
   };
+
+  const handleAddEvent = (selectionInfo) => {
+    setSelectedData(selectionInfo);
+    setOpenCreateTaskModal(true);
+  };
+
+  const handleCreateEvent = (event) => {
+    setEvents([...events,event])
+  }
   return (
     <Box>
       <FullCalendar
@@ -107,11 +119,19 @@ const DayView = () => {
           meridiem: true,
         }}
         editable={true}
+        selectable={true}
+        select={handleAddEvent}
       />
       <TaskDetailModal
         taskId={selectedTaskId}
         open={openModal}
         setOpen={setOpenModal}
+      />
+      <CreateModal
+        addEvent={handleCreateEvent}
+        open={openCreateTaskModal}
+        setOpenModal={setOpenCreateTaskModal}
+        data={selectedData}
       />
     </Box>
   );

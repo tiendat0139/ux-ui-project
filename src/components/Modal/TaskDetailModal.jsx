@@ -172,6 +172,7 @@ const TaskDetailModal = ({ taskId = 1, open, setOpen }) => {
             borderRadius: "1.2rem",
             outline: "none",
             overflow: "hidden",
+            pb: "1rem"
           }}
         >
           <Header titleIcon={true} handleClose={handleClose} />

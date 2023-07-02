@@ -222,42 +222,42 @@ const ImportFromSource = ({ setOpenModal }) => {
             <FormControl fullWidth sx={{ mt: "0.8rem" }}>
               <InputLabel id="select-tag">Tag</InputLabel>
               <Select
-                labelId="select-tag"
-                id="select-tag"
-                label="Tag"
+                labelId="Tag"
+                id="selec-tag"
+                label="tag"
                 name="tag"
                 value={taskInfo.tag}
                 onChange={(e) => handleChange(e)}
               >
-                <MenuItem value="1">
+                <MenuItem value="school">
                   <Box
                     sx={{
                       display: "inline-block",
-                      bgcolor: "#0099e7",
+                      bgcolor: "#039be5",
                       px: "1rem",
                       borderRadius: "0.4rem",
                     }}
                   >
                     <Typography variant="h5" color="#fff">
-                      Learning
+                      school
                     </Typography>
                   </Box>
                 </MenuItem>
-                <MenuItem value="2">
+                <MenuItem value="project">
                   <Box
                     sx={{
                       display: "inline-block",
-                      bgcolor: "#3f51b5",
+                      bgcolor: "#0070B1",
                       px: "1rem",
                       borderRadius: "0.4rem",
                     }}
                   >
                     <Typography variant="h6" color="#fff">
-                      Project
+                      project
                     </Typography>
                   </Box>
                 </MenuItem>
-                <MenuItem value="3">
+                <MenuItem value="sport">
                   <Box
                     sx={{
                       display: "inline-block",
@@ -267,7 +267,21 @@ const ImportFromSource = ({ setOpenModal }) => {
                     }}
                   >
                     <Typography variant="h5" color="#fff">
-                      Playing
+                      playing
+                    </Typography>
+                  </Box>
+                </MenuItem>
+                <MenuItem value="part time">
+                  <Box
+                    sx={{
+                      display: "inline-block",
+                      bgcolor: "#3f51b5",
+                      px: "1rem",
+                      borderRadius: "0.4rem",
+                    }}
+                  >
+                    <Typography variant="h5" color="#fff">
+                      part time
                     </Typography>
                   </Box>
                 </MenuItem>

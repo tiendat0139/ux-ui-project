@@ -40,14 +40,14 @@ const CreateNewTask = ({ setOpenModal }) => {
   const [fileUpload, setFileUpload] = useState([]);
   const [checkList, setCheckList] = useState([]);
   const [workspaces, setWorkspaces] = useState([]);
-  
+
   const handleChange = (e) => {
     setTaskInfo({ ...taskInfo, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = async () => {
     const data = { ...taskInfo, attachment: fileUpload, checkList: checkList };
-    const res = await fetch(" http://localhost:3000/tasks",{
+    const res = await fetch(" http://localhost:3000/tasks", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -64,11 +64,10 @@ const CreateNewTask = ({ setOpenModal }) => {
     const fetchData = async () => {
       const res = await fetch("http://localhost:3000/workspaces");
       const data = await res.json();
-      setWorkspaces([data[0],data[2]])
-    }
+      setWorkspaces([data[0], data[2]]);
+    };
     fetchData();
-
-  }, [])
+  }, []);
   return (
     <Box>
       <Box sx={{ maxHeight: "60vh", overflowY: "scroll", mt: "2rem" }}>
@@ -141,11 +140,13 @@ const CreateNewTask = ({ setOpenModal }) => {
                 value={taskInfo.workspace}
                 onChange={(e) => handleChange(e)}
               >
-                {workspaces.map(workspace => (
+                {workspaces.map((workspace) => (
                   <MenuItem value={workspace.id} key={workspace.id}>
-                    <CustomMenuItem text={workspace.name} avatar={workspace.avatar} />
+                    <CustomMenuItem
+                      text={workspace.name}
+                      avatar={workspace.avatar}
+                    />
                   </MenuItem>
-
                 ))}
               </Select>
             </FormControl>
@@ -223,25 +224,25 @@ const CreateNewTask = ({ setOpenModal }) => {
                 value={taskInfo.tag}
                 onChange={(e) => handleChange(e)}
               >
-                <MenuItem value="1">
+                <MenuItem value="school">
                   <Box
                     sx={{
                       display: "inline-block",
-                      bgcolor: "#0099e7",
+                      bgcolor: "#039be5",
                       px: "1rem",
                       borderRadius: "0.4rem",
                     }}
                   >
                     <Typography variant="h5" color="#fff">
-                      learning
+                      school
                     </Typography>
                   </Box>
                 </MenuItem>
-                <MenuItem value="2">
+                <MenuItem value="project">
                   <Box
                     sx={{
                       display: "inline-block",
-                      bgcolor: "#3f51b5",
+                      bgcolor: "#0070B1",
                       px: "1rem",
                       borderRadius: "0.4rem",
                     }}
@@ -251,7 +252,7 @@ const CreateNewTask = ({ setOpenModal }) => {
                     </Typography>
                   </Box>
                 </MenuItem>
-                <MenuItem value="3">
+                <MenuItem value="sport">
                   <Box
                     sx={{
                       display: "inline-block",
@@ -262,6 +263,20 @@ const CreateNewTask = ({ setOpenModal }) => {
                   >
                     <Typography variant="h5" color="#fff">
                       playing
+                    </Typography>
+                  </Box>
+                </MenuItem>
+                <MenuItem value="part time">
+                  <Box
+                    sx={{
+                      display: "inline-block",
+                      bgcolor: "#3f51b5",
+                      px: "1rem",
+                      borderRadius: "0.4rem",
+                    }}
+                  >
+                    <Typography variant="h5" color="#fff">
+                      part time
                     </Typography>
                   </Box>
                 </MenuItem>
