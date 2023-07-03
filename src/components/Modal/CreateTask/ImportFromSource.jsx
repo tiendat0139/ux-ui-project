@@ -9,6 +9,8 @@ import {
   Button,
   alpha,
   Select,
+  Tooltip,
+  IconButton,
 } from "@mui/material";
 import { toast } from "react-toastify";
 import dayjs from "dayjs";
@@ -18,13 +20,15 @@ import FileUpload from "../../FileUpload";
 import CustomMenuItem from "../CustomMenuItem";
 import { useEffect, useState } from "react";
 import CheckList from "./CheckList";
+import Icon from "../../Icons";
 
 const ImportFromSource = ({ setOpenModal }) => {
   const { palette } = useTheme();
+  const [reminder, setReminder] = useState(false);
   const [taskInfo, setTaskInfo] = useState({
     name: "",
-    start: dayjs(new Date()),
-    end: dayjs(new Date()),
+    start: null,
+    end: null,
     des: "",
     priority: "",
     tag: "",
@@ -323,27 +327,47 @@ const ImportFromSource = ({ setOpenModal }) => {
       </Box>
       <Box
         display="flex"
+        alignItems="center"
         gap="2rem"
-        justifyContent="end"
+        justifyContent="space-between"
         sx={{
           p: "1.8rem 4rem",
           mt: "1rem",
           borderTop: "1px solid rgba(0,0,0, 0.2)",
         }}
       >
-        <Button variant="outlined" sx={{ width: 100 }}>
-          Cancel
-        </Button>
-        <Button
-          variant="contained"
-          sx={{
-            width: 100,
-            "&:hover": { bgcolor: alpha(palette.primary.main, 0.9) },
-          }}
-          onClick={(e) => handleSubmit(e)}
-        >
-          Create
-        </Button>
+        <Tooltip title="Reminder" placement="top-start">
+          <IconButton sx={{p: 0}} onClick={() => setReminder(prev => !prev)}>
+            <Icon
+              name="alarm"
+              color={
+                !reminder
+                  ? alpha(palette.text.light, 0.3)
+                  : palette.primary.main
+              }
+              size={36}
+            ></Icon>
+          </IconButton>
+        </Tooltip>
+        <Box>
+          <Button
+            variant="outlined"
+            sx={{ width: 100, mr: "2rem" }}
+            onClick={() => setOpenModal(false)}
+          >
+            Cancel
+          </Button>
+          <Button
+            variant="contained"
+            sx={{
+              width: 100,
+              "&:hover": { bgcolor: alpha(palette.primary.main, 0.9) },
+            }}
+            onClick={(e) => handleSubmit(e)}
+          >
+            Create
+          </Button>
+        </Box>
       </Box>
     </Box>
   );

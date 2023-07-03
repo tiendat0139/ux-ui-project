@@ -27,10 +27,11 @@ const Kanban = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const res = await fetch("http://localhost:3000/tasks?assignee.id=1");
+      const res = await fetch("http://localhost:3000/tasks?assignee.id=1&_sort=start&_order=asc");
       const data = await res.json();
       const tasks = data
       const open = tasks.filter(task => task.status === "Open")
+      open.sort((a,b) => Date.parse(a.start.replace("T", " ")) < Date.parse(b.start.replace("T", " ")))
       const inProgress = tasks.filter(task => task.status === "In progress")
       const resolve = tasks.filter(task => task.status === "Resolve")
       const close = tasks.filter(task => task.status === "Close")

@@ -29,8 +29,8 @@ const CreateModal = ({ open, setOpenModal, addEvent, data }) => {
   const { palette } = useTheme();
   const [taskInfo, setTaskInfo] = useState({
     name: "",
-    start: "",
-    end: "",
+    start: null,
+    end: null,
     des: "",
     priority: "",
     tag: "",

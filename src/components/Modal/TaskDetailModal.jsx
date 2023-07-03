@@ -510,8 +510,9 @@ const TaskDetailModal = ({ taskId = 1, open, setOpen }) => {
                       {tab === 3 && (
                         <Evaluate
                           editable={task.assessor?.id === 1}
-                          evaluate={task.evaluate? task.evaluate : ""}
+                          evaluate={task.evaluate}
                           setOpen={setOpen}
+                          checklist={task.checklist}
                         />
                       )}
                     </Suspense>

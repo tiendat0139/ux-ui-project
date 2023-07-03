@@ -1,9 +1,13 @@
 import { Avatar, Box, Typography, alpha, useTheme } from "@mui/material";
-import avatar1 from "../../assets/img/avatar/1.png";
+import avatar2 from "../../assets/img/avatar/2.png";
+import avatar3 from "../../assets/img/avatar/3.png";
 import Icon from "../Icons";
 import { Link } from "react-router-dom";
-const NotificationItem = () => {
+import PropTypes from "prop-types";
+
+const NotificationItem = ({member, title, time, ws, read = true, memberId=1}) => {
   const { palette } = useTheme();
+  const avatars = [avatar2, avatar3];
   return (
     <Box
       display="flex"
@@ -12,21 +16,22 @@ const NotificationItem = () => {
         p: "1rem",
         borderRadius: "1rem",
         cursor: "pointer",
-        bgcolor: palette.primary.light,
+        bgcolor: !read? palette.primary.light : "",
         "&:hover": {
           bgcolor: "rgba(0,0,0,0.05)",
         },
+        mb: "0.5rem"
       }}
     >
-      <Avatar sx={{ width: "5rem", height: "5rem" }} src={avatar1} />
+      <Avatar sx={{ width: "5rem", height: "5rem" }} src={avatars[memberId-1]} />
       <Box sx={{ width: "30rem" }}>
         <p style={{ color: palette.text.dark, lineHeight: "2rem" }}>
-          <span style={{ fontWeight: 500 }}>Nguyen Duc Hoang </span>
-          has evaluated your task IT-12
+          <span style={{ fontWeight: 500 }}>{member} </span>
+          {title}
         </p>
         <Box display="flex" alignItems="center" gap="0.8rem">
           <Typography variant="h6" color={alpha(palette.text.light, 0.6)}>
-            2h ago
+            {time}
           </Typography>
           <Icon
             name="dot-filled"
@@ -35,7 +40,7 @@ const NotificationItem = () => {
           />
           <Link style={{ textDecoration: "none" }}>
             <Typography variant="h6" color={alpha(palette.text.light, 0.6)}>
-              ITSS Project
+              {ws}
             </Typography>
           </Link>
         </Box>
@@ -44,4 +49,12 @@ const NotificationItem = () => {
   );
 };
 
+NotificationItem.propTypes = {
+  member: PropTypes.string,
+  memberId: PropTypes.number,
+  title: PropTypes.string,
+  time: PropTypes.string,
+  ws: PropTypes.string,
+  read: PropTypes.bool
+}
 export default NotificationItem;

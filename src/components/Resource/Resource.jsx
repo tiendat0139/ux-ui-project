@@ -52,13 +52,11 @@ const Resource = () => {
       setMembers(data.members);
     };
     fetchData();
-  }, []);
+  }, [id]);
 
   const handleShareTime = async () => {
     if (!shared) {
-      const res = await fetch(
-        "http://localhost:3000/tasks?assignee.id=1&workspace=0&workspace=2"
-      );
+      const res = await fetch("http://localhost:3000/tasks?workspace=2");
       const data = await res.json();
       const newFormat = data.map((item) => {
         return {
@@ -78,7 +76,12 @@ const Resource = () => {
 
   const handleChangeGroup = (itemId, dragTime, newGroupOrder) => {
     const taskChange = tasks.findIndex((task) => task.id == itemId);
-    setTasks([...tasks, (tasks[taskChange].assigneeId = newGroupOrder + 1)]);
+    setTasks([
+      ...tasks,
+      (tasks[taskChange].assigneeId = newGroupOrder + 1),
+      (tasks[taskChange].end = tasks[taskChange].end - tasks[taskChange].start + dragTime),
+      (tasks[taskChange].start = dragTime),
+    ]);
   };
 
   const handleChangeTask = (itemId, time, edge) => {
@@ -90,6 +93,26 @@ const Resource = () => {
     }
   };
 
+  const getMemberFreeTime = async () => {
+    if (!shared) {
+      const res = await fetch("http://localhost:3000/freeTimes");
+      const data = await res.json();
+      const newFormat = data.map((item) => {
+        return {
+          ...item,
+          name: "Busy",
+          type: "freeTime",
+          start: moment(item.start),
+          end: moment(item.end),
+          assigneeId: item.assignee.id,
+        };
+      });
+      setFreeTime(newFormat);
+    } else {
+      setFreeTime([]);
+    }
+    setShared((prev) => !prev);
+  };
   const keys = {
     groupIdKey: "id",
     groupTitleKey: "name",
@@ -127,13 +150,13 @@ const Resource = () => {
     <Box sx={{ position: "relative" }}>
       <Box>
         <Box sx={{ textAlign: "right", mb: "1rem" }}>
-          {id === 3 ? (
-            <Button variant="outlined" onClick={handleShareTime}>
-              {!shared ? "Share time" : "Undo share time"}
+          {id == "3" ? (
+            <Button variant="outlined" onClick={getMemberFreeTime}>
+              {!shared ? "Show member time" : "Hide member time"}
             </Button>
           ) : (
             <Button variant="outlined" onClick={handleShareTime}>
-              {!shared ? "Show free time" : "Hide free time"}
+              {!shared ? "Share time" : "Undo share time"}
             </Button>
           )}
           <IconButton

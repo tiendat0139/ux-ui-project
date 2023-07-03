@@ -23,9 +23,9 @@ const Filter = ({ setFiltered }) => {
   let { id } = useParams();
 
   const [filter, setFilter] = useState({
-    assignee: "",
-    reviewer: "",
-    status: "",
+    assignee: "-1",
+    reviewer: "-1",
+    status: "-1",
   });
 
   const { palette } = useTheme();
@@ -47,11 +47,12 @@ const Filter = ({ setFiltered }) => {
     setFilter({ ...filter, [e.target.name]: e.target.value });
     const params = { ...filter, [e.target.name]: e.target.value };
 
+    console.log(params);
     const res = await fetch(
       `http://localhost:3000/tasks?workspace=${id}&&${
-        params.assignee && `assignee.id=${params.assignee}&&`
-      }${params.reviewer && `assessor.id=${params.assessor}&&`}${
-        params.status && `status=${params.status}`
+        params.assignee !== "-1" && `assignee.id=${params.assignee}&&`
+      }${params.reviewer !== "-1" && `assessor.id=${params.reviewer}&&`}${
+        params.status !== "-1" && `status=${params.status}`
       }&&_page=1&_limit=5`
     );
     const data = await res.json();
@@ -104,9 +105,11 @@ const Filter = ({ setFiltered }) => {
                 value={filter.assignee}
                 onChange={handleFilter}
               >
-                <MenuItem value="">
+                <MenuItem value="-1">
                   <Box>
-                    <Typography sx={{ pl: "3rem" }}>All member</Typography>
+                    <Typography variant="h5" fontWeight={500}>
+                      All member
+                    </Typography>
                   </Box>
                 </MenuItem>
                 <MenuItem value="0">
@@ -130,7 +133,7 @@ const Filter = ({ setFiltered }) => {
           <FormControl fullWidth sx={{ mt: "2rem" }}>
             <Box display="flex" gap="2rem" alignItems="center">
               <Typography color={palette.text.dark} sx={{ width: "10rem" }}>
-              Evaluator
+                Evaluator
               </Typography>
               <Select
                 fullWidth
@@ -139,8 +142,10 @@ const Filter = ({ setFiltered }) => {
                 value={filter.reviewer}
                 onChange={handleFilter}
               >
-                <MenuItem value="">
-                  <Typography sx={{ pl: "3rem" }}>All member</Typography>
+                <MenuItem value="-1">
+                  <Typography variant="h5" fontWeight={500}>
+                    All member
+                  </Typography>
                 </MenuItem>
                 <MenuItem value="1">
                   <CustomMenuItem text="Me" avatar={avatar1} />
@@ -169,8 +174,10 @@ const Filter = ({ setFiltered }) => {
                 onChange={handleFilter}
                 value={filter.status}
               >
-                <MenuItem value="">
-                  <Typography sx={{ pl: "3rem" }}>All status</Typography>
+                <MenuItem value="-1">
+                  <Typography variant="h5" fontWeight={500}>
+                    All status
+                  </Typography>
                 </MenuItem>
                 <MenuItem value="Open">
                   <TaskStatus status="Open" />

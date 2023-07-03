@@ -10,8 +10,9 @@ import {
   Button,
   alpha,
   Select,
+  Tooltip,
+  IconButton,
 } from "@mui/material";
-import dayjs from "dayjs";
 import PropTypes from "prop-types";
 import CustomDatePicker from "../../DatePicker";
 import FileUpload from "../../FileUpload";
@@ -22,18 +23,22 @@ import avatar3 from "../../../assets/img/avatar/3.png";
 import avatar4 from "../../../assets/img/avatar/4.png";
 import CheckList from "./CheckList";
 import { toast } from "react-toastify";
+import Icon from "../../Icons";
 
 const CreateNewTask = ({ setOpenModal }) => {
   const { palette } = useTheme();
+  const [reminder, setReminder] = useState(false);
+  const [isPersonal, setIsPersonal] = useState(false);
   const [taskInfo, setTaskInfo] = useState({
     name: "",
-    start: dayjs(new Date()),
-    end: dayjs(new Date()),
+    start: null,
+    end: null,
     des: "",
     priority: "",
     tag: "",
     workspace: "",
     assignee: "",
+    assessor: "",
     recur: "",
     reminder: false,
   });
@@ -42,6 +47,11 @@ const CreateNewTask = ({ setOpenModal }) => {
   const [workspaces, setWorkspaces] = useState([]);
 
   const handleChange = (e) => {
+    if (e.target.name == "workspace" && e.target.value == 0) {
+      setIsPersonal(true);
+    } else {
+      setIsPersonal(false);
+    }
     setTaskInfo({ ...taskInfo, [e.target.name]: e.target.value });
   };
 
@@ -68,6 +78,7 @@ const CreateNewTask = ({ setOpenModal }) => {
     };
     fetchData();
   }, []);
+
   return (
     <Box>
       <Box sx={{ maxHeight: "60vh", overflowY: "scroll", mt: "2rem" }}>
@@ -150,6 +161,13 @@ const CreateNewTask = ({ setOpenModal }) => {
                 ))}
               </Select>
             </FormControl>
+          </Box>
+          <Box
+            display="flex"
+            gap="3rem"
+            justifyContent="space-between"
+            alignItems="center"
+          >
             <FormControl fullWidth sx={{ mt: "0.8rem" }}>
               <InputLabel id="assignee">Assignee</InputLabel>
               <Select
@@ -158,6 +176,30 @@ const CreateNewTask = ({ setOpenModal }) => {
                 label="Assignee"
                 name="assignee"
                 value={taskInfo.assignee}
+                onChange={(e) => handleChange(e)}
+              >
+                <MenuItem value="1">
+                  <CustomMenuItem text="Me" avatar={avatar1} />
+                </MenuItem>
+                <MenuItem value="2">
+                  <CustomMenuItem text="Nguyen Duc Hoang" avatar={avatar2} />
+                </MenuItem>
+                <MenuItem value="3">
+                  <CustomMenuItem text="Hoang The Anh" avatar={avatar3} />
+                </MenuItem>
+                <MenuItem value="4">
+                  <CustomMenuItem text="Pham Xuan Duy" avatar={avatar4} />
+                </MenuItem>
+              </Select>
+            </FormControl>
+            <FormControl fullWidth sx={{ mt: "0.8rem" }}>
+              <InputLabel id="assessor">Evaluator</InputLabel>
+              <Select
+                labelId="assessor"
+                id="assessor"
+                label="Evaluator"
+                name="assessor"
+                value={taskInfo.assessor}
                 onChange={(e) => handleChange(e)}
               >
                 <MenuItem value="1">
@@ -318,27 +360,52 @@ const CreateNewTask = ({ setOpenModal }) => {
       </Box>
       <Box
         display="flex"
+        alignItems="center"
         gap="2rem"
-        justifyContent="end"
+        justifyContent={isPersonal ? "space-between" : "end"}
         sx={{
           p: "1.8rem 4rem",
           mt: "1rem",
           borderTop: "1px solid rgba(0,0,0, 0.2)",
         }}
       >
-        <Button variant="outlined" sx={{ width: 100 }}>
-          Cancel
-        </Button>
-        <Button
-          variant="contained"
-          sx={{
-            width: 100,
-            "&:hover": { bgcolor: alpha(palette.primary.main, 0.9) },
-          }}
-          onClick={(e) => handleSubmit(e)}
-        >
-          Create
-        </Button>
+        {isPersonal && (
+          <Tooltip title="Reminder" placement="top-start">
+            <IconButton
+              sx={{ p: 0 }}
+              onClick={() => setReminder((prev) => !prev)}
+            >
+              <Icon
+                name="alarm"
+                color={
+                  !reminder
+                    ? alpha(palette.text.light, 0.3)
+                    : palette.primary.main
+                }
+                size={36}
+              ></Icon>
+            </IconButton>
+          </Tooltip>
+        )}
+        <Box>
+          <Button
+            variant="outlined"
+            sx={{ width: 100, mr: "2rem" }}
+            onClick={() => setOpenModal(false)}
+          >
+            Cancel
+          </Button>
+          <Button
+            variant="contained"
+            sx={{
+              width: 100,
+              "&:hover": { bgcolor: alpha(palette.primary.main, 0.9) },
+            }}
+            onClick={(e) => handleSubmit(e)}
+          >
+            Create
+          </Button>
+        </Box>
       </Box>
     </Box>
   );

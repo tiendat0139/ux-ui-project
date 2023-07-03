@@ -156,7 +156,7 @@
           "id": "10",
           "name": "Write Website Specification",
           "des": "Create a comprehensive specification document",
-          "status": "Close",
+          "status": "Resolve",
           "start": "2023-06-27T00:00",
           "end": "2023-06-30T00:00",
           "priority": "high",
@@ -277,7 +277,7 @@
               "time": "2 days ago"
             }
           ],
-          "evalutate": {
+          "evaluate": {
             "content": "",
             "point": "100"
           }
@@ -286,7 +286,7 @@
           "id": "12",
           "name": "Implement authentication and authorization",
           "des": "Develop and integrate the authentication and authorization mechanisms to secure the system.",
-          "status": "In progress",
+          "status": "Close",
           "start": "2023-06-30T08:00",
           "end": "2023-07-03T17:00",
           "priority": "normal",
@@ -323,18 +323,6 @@
             {
               "name": "Set up user roles and permissions",
               "checked": true
-            },
-            {
-              "name": "Implement access control mechanisms",
-              "checked": false
-            },
-            {
-              "name": "Integrate authentication with external identity providers",
-              "checked": false
-            },
-            {
-              "name": "Implement session management and logout functionality",
-              "checked": false
             }
           ],
           "comments": [
@@ -349,7 +337,22 @@
               "size": "3MB  "
             }
           ],
-          "evalutate": {}
+          "evaluate": [
+            {
+              "name": "Design the user authentication process",
+              "checked": true
+            },
+            {
+              "name": "Implement user registration and login functionality",
+              "checked": true,
+              "feedback": "Done"
+            },
+            {
+              "name": "Set up user roles and permissions",
+              "checked": true,
+              "feedback": "Done"
+            }
+          ]
         },
         {
           "id": "13",
@@ -402,7 +405,7 @@
               "size": "10.4MB"
             }
           ],
-          "evalutate": {}
+          "evaluate": []
         },
         {
           "id": "14",
@@ -467,7 +470,7 @@
               "size": "3MB  "
             }
           ],
-          "evalutate": {}
+          "evaluate": []
         },
         {
           "id": "15",
@@ -528,7 +531,7 @@
               "size": "5MB"
             }
           ],
-          "evalutate": {}
+          "evaluate": []
         },
         {
           "id": "16",
@@ -593,7 +596,7 @@
               "size": "2MB"
             }
           ],
-          "evalutate": {}
+          "evaluate": []
         }
       ]
     },
@@ -691,15 +694,69 @@
               "size": "2MB"
             }
           ],
-          "evalutate": {}
+          "evaluate": []
         },
         {
           "id": "18",
-          "name": "create figma projct and import plugin",
+          "name": "Initialize environment for development",
+          "des": "Initialize environment for development use Reactjs",
+          "status": "In progress",
+          "start": "2023-07-12T17:30",
+          "end": "2023-07-14T17:30",
+          "priority": "high",
+          "tag": "project",
+          "workspace": "2",
+          "workspaceName": "UX UI Design",
+          "relatedUser": [
+            1,
+            3,
+            4
+          ],
+          "assignee": {
+            "id": 1,
+            "name": "Nguyen Tien Dat",
+            "email": "tiendat@gmail.com",
+            "avatar": "/assets/1.png"
+          },
+          "assessor": {
+            "id": 2,
+            "name": "Nguyen Duc Hoang",
+            "email": "hoangnd@gmail.com",
+            "avatar": "/assets/2.png"
+          },
+          "reminder": "false",
+          "checklist": [
+            {
+              "name": "Create Reactjs Project",
+              "checked": false
+            },
+            {
+              "name": "Create github repository",
+              "checked": false
+            },
+            {
+              "name": "Add team members to collaborator",
+              "checked": false
+            }
+          ],
+          "comments": [
+            "Add README file to describes and launches a project"
+          ],
+          "attachment": [
+            {
+              "name": "guideline.pdf",
+              "size": "2MB"
+            }
+          ],
+          "evaluate": []
+        },
+        {
+          "id": "19",
+          "name": "Create figma projct and import plugin",
           "des": "Set up Figma and install necessary plugins for design",
           "status": "Open",
-          "start": "2023-07-06T17:30",
-          "end": "2023-07-08T17:30",
+          "start": "2023-07-08T17:30",
+          "end": "2023-07-09T17:30",
           "priority": "low",
           "tag": "project",
           "workspace": "2",
@@ -746,15 +803,15 @@
               "size": "2MB"
             }
           ],
-          "evalutate": {}
+          "evaluate": []
         },
         {
-          "id": "19",
+          "id": "20",
           "name": "Create user persona",
           "des": "Create user personas to understand and represent the target users effectively",
           "status": "In progress",
-          "start": "2023-07-03T17:30",
-          "end": "2023-07-05T17:30",
+          "start": "2023-06-30T17:30",
+          "end": "2023-07-01T17:30",
           "priority": "high",
           "tag": "project",
           "workspace": "2",
@@ -797,7 +854,209 @@
               "size": "2MB"
             }
           ],
-          "evalutate": {}
+          "evaluate": []
+        },
+        {
+          "id": "21",
+          "name": "Create user requirements collection document",
+          "des": "Create user requirements collection document",
+          "status": "In progress",
+          "start": "2023-07-31T17:30",
+          "end": "2023-08-02T17:30",
+          "priority": "high",
+          "tag": "project",
+          "workspace": "2",
+          "workspaceName": "UX UI Design",
+          "relatedUser": [
+            1,
+            3,
+            4
+          ],
+          "assignee": {
+            "id": 1,
+            "name": "Nguyen Tien Dat",
+            "email": "tiendat@gmail.com",
+            "avatar": "/assets/1.png"
+          },
+          "assessor": {
+            "id": 2,
+            "name": "Nguyen Duc Hoang",
+            "email": "hoangnd@gmail.com",
+            "avatar": "/assets/2.png"
+          },
+          "reminder": "false",
+          "checklist": [
+            {
+              "name": "Create user requirements form",
+              "checked": false
+            },
+            {
+              "name": "User requirements specification document",
+              "checked": false
+            }
+          ],
+          "comments": [
+            "Consider demographics, motivations, and behaviors when creating user personas",
+            "Use qualitative and quantitative research methods to gather data for personas"
+          ],
+          "attachment": [
+            {
+              "name": "guideline.pdf",
+              "size": "2MB"
+            }
+          ],
+          "evaluate": []
+        },
+        {
+          "id": "22",
+          "name": "Create user stories document",
+          "des": "Create user stories document include 3 roles: student, worker, manager",
+          "status": "In progress",
+          "start": "2023-08-04T17:30",
+          "end": "2023-08-05T17:30",
+          "priority": "high",
+          "tag": "project",
+          "workspace": "2",
+          "workspaceName": "UX UI Design",
+          "relatedUser": [
+            1,
+            3,
+            4
+          ],
+          "assignee": {
+            "id": 1,
+            "name": "Nguyen Tien Dat",
+            "email": "tiendat@gmail.com",
+            "avatar": "/assets/1.png"
+          },
+          "assessor": {
+            "id": 2,
+            "name": "Nguyen Duc Hoang",
+            "email": "hoangnd@gmail.com",
+            "avatar": "/assets/2.png"
+          },
+          "reminder": "false",
+          "checklist": [
+            {
+              "name": "Create user stories document for student",
+              "checked": false
+            },
+            {
+              "name": "Create user stories document for worker",
+              "checked": false
+            },
+            {
+              "name": "Create user stories document for manager",
+              "checked": false
+            }
+          ],
+          "comments": [
+            "Consider demographics, motivations, and behaviors when creating user personas",
+            "Use qualitative and quantitative research methods to gather data for personas"
+          ],
+          "attachment": [
+            {
+              "name": "guideline.pdf",
+              "size": "2MB"
+            }
+          ],
+          "evaluate": []
+        },
+        {
+          "id": "23",
+          "name": "Create empathy map",
+          "des": "Create empathy map",
+          "status": "In progress",
+          "start": "2023-08-06T17:30",
+          "end": "2023-08-08T17:30",
+          "priority": "high",
+          "tag": "project",
+          "workspace": "2",
+          "workspaceName": "UX UI Design",
+          "relatedUser": [
+            1,
+            3,
+            4
+          ],
+          "assignee": {
+            "id": 1,
+            "name": "Nguyen Tien Dat",
+            "email": "tiendat@gmail.com",
+            "avatar": "/assets/1.png"
+          },
+          "assessor": {
+            "id": 2,
+            "name": "Nguyen Duc Hoang",
+            "email": "hoangnd@gmail.com",
+            "avatar": "/assets/2.png"
+          },
+          "reminder": "false",
+          "checklist": [],
+          "comments": [
+            "Consider demographics, motivations, and behaviors when creating user personas",
+            "Use qualitative and quantitative research methods to gather data for personas"
+          ],
+          "attachment": [
+            {
+              "name": "guideline.pdf",
+              "size": "2MB"
+            }
+          ],
+          "evaluate": []
+        },
+        {
+          "id": "24",
+          "name": "Create sitemaps",
+          "des": "Create sitemaps on figma",
+          "status": "In progress",
+          "start": "2023-08-04T17:30",
+          "end": "2023-08-05T17:30",
+          "priority": "high",
+          "tag": "project",
+          "workspace": "2",
+          "workspaceName": "UX UI Design",
+          "relatedUser": [
+            1,
+            3,
+            4
+          ],
+          "assignee": {
+            "id": 1,
+            "name": "Nguyen Tien Dat",
+            "email": "tiendat@gmail.com",
+            "avatar": "/assets/1.png"
+          },
+          "assessor": {
+            "id": 2,
+            "name": "Nguyen Duc Hoang",
+            "email": "hoangnd@gmail.com",
+            "avatar": "/assets/2.png"
+          },
+          "reminder": "false",
+          "checklist": [
+            {
+              "name": "Create sitemaps for personal screens",
+              "checked": false
+            },
+            {
+              "name": "Create sitemaps for workspace screens",
+              "checked": false
+            },
+            {
+              "name": "Create sitemaps for authentication screens",
+              "checked": false
+            }
+          ],
+          "comments": [
+            "Workspace should has sub navbar"
+          ],
+          "attachment": [
+            {
+              "name": "guideline.pdf",
+              "size": "2MB"
+            }
+          ],
+          "evaluate": []
         }
       ],
       "avatar": "/assets/ws2.png"
@@ -840,7 +1099,7 @@
       ],
       "tasks": [
         {
-          "id": "20",
+          "id": "25",
           "name": "Write Website Specification",
           "des": "Create a comprehensive specification document",
           "status": "Close",
@@ -856,8 +1115,8 @@
             3
           ],
           "assignee": {
-            "id": 2,
-            "name": "Nguyen Duc Hoang",
+            "id": 4,
+            "name": "Pham Xuan Duy",
             "email": "tiendat@gmail.com",
             "avatar": "/assets/1.png"
           },
@@ -898,13 +1157,10 @@
               "time": "2 days ago"
             }
           ],
-          "evaluate": {
-            "content": "Did exactly as requested but still some errors",
-            "point": "60"
-          }
+          "evaluate": []
         },
         {
-          "id": "21",
+          "id": "26",
           "name": "Create migration",
           "des": "Generate and implement database migration",
           "status": "Resolve",
@@ -964,16 +1220,16 @@
               "time": "2 days ago"
             }
           ],
-          "evalutate": {
+          "evaluate": {
             "content": "",
             "point": "100"
           }
         },
         {
-          "id": "22",
+          "id": "27",
           "name": "Implement authentication and authorization",
           "des": "Develop and integrate the authentication and authorization mechanisms to secure the system.",
-          "status": "In progress",
+          "status": "Close",
           "start": "2023-06-30T08:00",
           "end": "2023-07-03T17:00",
           "priority": "normal",
@@ -1010,18 +1266,6 @@
             {
               "name": "Set up user roles and permissions",
               "checked": true
-            },
-            {
-              "name": "Implement access control mechanisms",
-              "checked": false
-            },
-            {
-              "name": "Integrate authentication with external identity providers",
-              "checked": false
-            },
-            {
-              "name": "Implement session management and logout functionality",
-              "checked": false
             }
           ],
           "comments": [
@@ -1036,10 +1280,26 @@
               "size": "3MB  "
             }
           ],
-          "evalutate": {}
+          "evaluate": [
+            {
+              "name": "Design the user authentication process",
+              "checked": true,
+              "feedback": "Done"
+            },
+            {
+              "name": "Implement user registration and login functionality",
+              "checked": true,
+              "feedback": "Done"
+            },
+            {
+              "name": "Set up user roles and permissions",
+              "checked": true,
+              "feedback": "Done"
+            }
+          ]
         },
         {
-          "id": "23",
+          "id": "28",
           "name": "Write unit test",
           "des": "Develop and implement unit tests to verify the functionality",
           "start": "2023-06-30T08:30",
@@ -1089,10 +1349,10 @@
               "size": "10.4MB"
             }
           ],
-          "evalutate": {}
+          "evaluate": []
         },
         {
-          "id": "24",
+          "id": "29",
           "name": "Deploy Config Servers for Production Deployments",
           "des": "Set up and configure the necessary configuration servers to support production ",
           "start": "2023-07-06T00:00",
@@ -1154,11 +1414,11 @@
               "size": "3MB  "
             }
           ],
-          "evalutate": {}
+          "evaluate": []
         },
         {
-          "id": "25",
-          "name": "Write Website Specification",
+          "id": "30",
+          "name": "Change Website Specification after feedback",
           "des": "Create a comprehensive specification document",
           "status": "Open",
           "start": "2023-07-05T08:30",
@@ -1215,10 +1475,10 @@
               "size": "5MB"
             }
           ],
-          "evalutate": {}
+          "evaluate": []
         },
         {
-          "id": "26",
+          "id": "31",
           "name": "Build homepage UI and match API",
           "des": "Create homepage follows the design and match API",
           "status": "In progress",
@@ -1252,10 +1512,6 @@
               "checked": true
             },
             {
-              "name": "Implement HTML structure",
-              "checked": true
-            },
-            {
               "name": "Add responsive design",
               "checked": true
             },
@@ -1280,13 +1536,13 @@
               "size": "2MB"
             }
           ],
-          "evalutate": {}
+          "evaluate": []
         },
         {
-          "id": "27",
+          "id": "32",
           "name": "Build Login page UI and match API",
           "des": "Create Login follows the design and match API",
-          "status": "In progress",
+          "status": "Open",
           "start": "2023-07-06T17:30",
           "end": "2023-07-09T17:30",
           "priority": "normal",
@@ -1341,10 +1597,10 @@
               "size": "2MB"
             }
           ],
-          "evalutate": {}
+          "evaluate": []
         },
         {
-          "id": "28",
+          "id": "33",
           "name": "Create API resource for product management",
           "des": "Create API resource for product management",
           "status": "Open",
@@ -1406,7 +1662,7 @@
               "size": "2MB"
             }
           ],
-          "evalutate": {}
+          "evaluate": []
         }
       ],
       "avatar": "/assets/ws3.png"
@@ -1517,6 +1773,48 @@
       "source": "2"
     },
     {
+      "id": "3.1",
+      "name": "Go to tutor math",
+      "start": "2023-08-11T14:30",
+      "end": "2023-08-11T16:30",
+      "status": "Close",
+      "des": "Tutoring math for 10th graders at Cau Giay",
+      "priority": "normal",
+      "tag": "part time",
+      "workspace": "0",
+      "workspaceName": "Personal",
+      "assignee": {
+        "id": 1,
+        "name": "Nguyen Tien Dat",
+        "email": "tiendat@gmail.com",
+        "avatar": "/assets/1.png"
+      },
+      "recurring": "weekly",
+      "reminder": "false",
+      "source": "2"
+    },
+    {
+      "id": "3.2",
+      "name": "Go to tutor math",
+      "start": "2023-08-18T14:30",
+      "end": "2023-08-18T16:30",
+      "status": "Close",
+      "des": "Tutoring math for 10th graders at Cau Giay",
+      "priority": "normal",
+      "tag": "part time",
+      "workspace": "0",
+      "workspaceName": "Personal",
+      "assignee": {
+        "id": 1,
+        "name": "Nguyen Tien Dat",
+        "email": "tiendat@gmail.com",
+        "avatar": "/assets/1.png"
+      },
+      "recurring": "weekly",
+      "reminder": "false",
+      "source": "2"
+    },
+    {
       "id": "4",
       "name": "Japanese 6",
       "start": "2023-06-23T10:15",
@@ -1580,7 +1878,91 @@
       "source": "1"
     },
     {
+      "id": "4.3",
+      "name": "Japanese 6",
+      "start": "2023-08-02T10:15",
+      "end": "2023-08-02T11:45",
+      "status": "Open",
+      "des": "D9 401",
+      "priority": "high",
+      "tag": "school",
+      "workspace": "0",
+      "workspaceName": "Personal",
+      "assignee": {
+        "id": 1,
+        "name": "Nguyen Tien Dat",
+        "email": "tiendat@gmail.com",
+        "avatar": "/assets/1.png"
+      },
+      "recurring": "weekly",
+      "reminder": "false",
+      "source": "1"
+    },
+    {
+      "id": "4.4",
+      "name": "Japanese 6",
+      "start": "2023-08-09T10:15",
+      "end": "2023-08-09T11:45",
+      "status": "Open",
+      "des": "D9 401",
+      "priority": "high",
+      "tag": "school",
+      "workspace": "0",
+      "workspaceName": "Personal",
+      "assignee": {
+        "id": 1,
+        "name": "Nguyen Tien Dat",
+        "email": "tiendat@gmail.com",
+        "avatar": "/assets/1.png"
+      },
+      "recurring": "weekly",
+      "reminder": "false",
+      "source": "1"
+    },
+    {
       "id": "5",
+      "name": "User interface",
+      "start": "2023-06-20T12:30",
+      "end": "2023-06-20T15:50",
+      "status": "Close",
+      "des": "Classroom D5 503",
+      "priority": "high",
+      "tag": "school",
+      "workspaceName": "Personal",
+      "workspace": "0",
+      "assignee": {
+        "id": 1,
+        "name": "Nguyen Tien Dat",
+        "email": "tiendat@gmail.com",
+        "avatar": "/assets/1.png"
+      },
+      "recurring": "weekly",
+      "reminder": "false",
+      "source": "1"
+    },
+    {
+      "id": "5.1",
+      "name": "User interface",
+      "start": "2023-06-27T12:30",
+      "end": "2023-06-27T15:50",
+      "status": "Close",
+      "des": "Classroom D5 503",
+      "priority": "high",
+      "tag": "school",
+      "workspaceName": "Personal",
+      "workspace": "0",
+      "assignee": {
+        "id": 1,
+        "name": "Nguyen Tien Dat",
+        "email": "tiendat@gmail.com",
+        "avatar": "/assets/1.png"
+      },
+      "recurring": "weekly",
+      "reminder": "false",
+      "source": "1"
+    },
+    {
+      "id": "5.2",
       "name": "User interface",
       "start": "2023-07-04T12:30",
       "end": "2023-07-04T15:50",
@@ -1601,10 +1983,93 @@
       "source": "1"
     },
     {
+      "id": "5.3",
+      "name": "User interface",
+      "start": "2023-07-25T12:30",
+      "end": "2023-07-25T15:50",
+      "status": "Open",
+      "des": "Classroom D5 503",
+      "priority": "high",
+      "tag": "school",
+      "workspaceName": "Personal",
+      "workspace": "0",
+      "assignee": {
+        "id": 1,
+        "name": "Nguyen Tien Dat",
+        "email": "tiendat@gmail.com",
+        "avatar": "/assets/1.png"
+      },
+      "recurring": "weekly",
+      "reminder": "false",
+      "source": "1"
+    },
+    {
+      "id": "5.4",
+      "name": "User interface",
+      "start": "2023-08-02T12:30",
+      "end": "2023-08-02T15:50",
+      "status": "Open",
+      "des": "Classroom D5 503",
+      "priority": "high",
+      "tag": "school",
+      "workspaceName": "Personal",
+      "workspace": "0",
+      "assignee": {
+        "id": 1,
+        "name": "Nguyen Tien Dat",
+        "email": "tiendat@gmail.com",
+        "avatar": "/assets/1.png"
+      },
+      "recurring": "weekly",
+      "reminder": "false",
+      "source": "1"
+    },
+    {
+      "id": "5.5",
+      "name": "User interface",
+      "start": "2023-08-09T12:30",
+      "end": "2023-08-09T15:50",
+      "status": "Open",
+      "des": "Classroom D5 503",
+      "priority": "high",
+      "tag": "school",
+      "workspaceName": "Personal",
+      "workspace": "0",
+      "assignee": {
+        "id": 1,
+        "name": "Nguyen Tien Dat",
+        "email": "tiendat@gmail.com",
+        "avatar": "/assets/1.png"
+      },
+      "recurring": "weekly",
+      "reminder": "false",
+      "source": "1"
+    },
+    {
       "id": "6",
       "name": "Kaiwa 2",
       "start": "2023-07-10T10:15 ",
       "end": "2023-07-10T11:45 ",
+      "des": "Online MS Teams",
+      "status": "Open",
+      "priority": "high",
+      "tag": "learning",
+      "workspaceName": "Personal",
+      "workspace": "0",
+      "assignee": {
+        "id": 1,
+        "name": "Nguyen Tien Dat",
+        "email": "tiendat@gmail.com",
+        "avatar": "/assets/1.png"
+      },
+      "recurring": "weekly",
+      "reminder": "false"
+    },
+    {
+      "id": "6",
+      "name": "Kaiwa 2",
+      "start": "2023-08-10T10:15 ",
+      "end": "2023-08-10T11:45 ",
       "des": "Online MS Teams",
       "status": "Open",
       "priority": "high",
@@ -1663,6 +2128,48 @@
       "source": "1"
     },
     {
+      "id": "8.1",
+      "name": "AI Introduction",
+      "start": "2023-08-07T06:40",
+      "end": "2023-08-07T09:50",
+      "des": "D9 401",
+      "status": "Open",
+      "priority": "high",
+      "tag": "school",
+      "workspace": "0",
+      "workspaceName": "Personal",
+      "assignee": {
+        "id": 1,
+        "name": "Nguyen Tien Dat",
+        "email": "tiendat@gmail.com",
+        "avatar": "/assets/1.png"
+      },
+      "recurring": "weekly",
+      "reminder": "false",
+      "source": "1"
+    },
+    {
+      "id": "8.2",
+      "name": "AI Introduction",
+      "start": "2023-08-15T06:40",
+      "end": "2023-08-15T09:50",
+      "des": "D9 401",
+      "status": "Open",
+      "priority": "high",
+      "tag": "school",
+      "workspace": "0",
+      "workspaceName": "Personal",
+      "assignee": {
+        "id": 1,
+        "name": "Nguyen Tien Dat",
+        "email": "tiendat@gmail.com",
+        "avatar": "/assets/1.png"
+      },
+      "recurring": "weekly",
+      "reminder": "false",
+      "source": "1"
+    },
+    {
       "id": "9",
       "name": "Go to tutor physic",
       "start": "2023-07-06T17:30",
@@ -1687,7 +2194,7 @@
       "id": "10",
       "name": "Write Website Specification",
       "des": "Create a comprehensive specification document",
-      "status": "Close",
+      "status": "Resolve",
       "start": "2023-06-27T00:00",
       "end": "2023-06-30T00:00",
       "priority": "high",
@@ -1742,10 +2249,7 @@
           "time": "2 days ago"
         }
       ],
-      "evaluate": {
-        "content": "Did exactly as requested but still some errors",
-        "point": "60"
-      }
+      "evaluate": []
     },
     {
       "id": "11",
@@ -1808,16 +2312,34 @@
           "time": "2 days ago"
         }
       ],
-      "evalutate": {
-        "content": "",
-        "point": "100"
-      }
+      "evaluate": [
+        {
+          "name": "Design the user authentication process",
+          "checked": true,
+          "feedback": "Done"
+        },
+        {
+          "name": "Implement user registration and login functionality",
+          "checked": true,
+          "feedback": "Done"
+        },
+        {
+          "name": "Set up user roles and permissions",
+          "checked": true,
+          "feedback": "Done"
+        },
+        {
+          "name": "Implement access control mechanisms",
+          "checked": false,
+          "feedback": "No exacly"
+        }
+      ]
     },
     {
       "id": "12",
       "name": "Implement authentication and authorization",
       "des": "Develop and integrate the authentication and authorization mechanisms to secure the system.",
-      "status": "In progress",
+      "status": "Close",
       "start": "2023-06-30T08:00",
       "end": "2023-07-03T17:00",
       "priority": "normal",
@@ -1829,13 +2351,13 @@
         3,
         4
       ],
-      "assignee": {
+      "assessor": {
         "id": 2,
         "name": "Nguyen Duc Hoang",
         "email": "hoangnd@gmail.com",
         "avatar": "/assets/2.png"
       },
-      "assessor": {
+      "assignee": {
         "id": 1,
         "name": "Nguyen Tien Dat",
         "email": "tiendat@gmail.com",
@@ -1854,18 +2376,6 @@
         {
           "name": "Set up user roles and permissions",
           "checked": true
-        },
-        {
-          "name": "Implement access control mechanisms",
-          "checked": false
-        },
-        {
-          "name": "Integrate authentication with external identity providers",
-          "checked": false
-        },
-        {
-          "name": "Implement session management and logout functionality",
-          "checked": false
         }
       ],
       "comments": [
@@ -1880,7 +2390,22 @@
           "size": "3MB  "
         }
       ],
-      "evalutate": {}
+      "evaluate": [
+        {
+          "name": "Design the user authentication process",
+          "checked": true
+        },
+        {
+          "name": "Implement user registration and login functionality",
+          "checked": true,
+          "feedback": "Done"
+        },
+        {
+          "name": "Set up user roles and permissions",
+          "checked": true,
+          "feedback": "Done"
+        }
+      ]
     },
     {
       "id": "13",
@@ -1933,7 +2458,7 @@
           "size": "10.4MB"
         }
       ],
-      "evalutate": {}
+      "evaluate": []
     },
     {
       "id": "14",
@@ -1998,7 +2523,7 @@
           "size": "3MB  "
         }
       ],
-      "evalutate": {}
+      "evaluate": []
     },
     {
       "id": "15",
@@ -2059,7 +2584,7 @@
           "size": "5MB"
         }
       ],
-      "evalutate": {}
+      "evaluate": []
     },
     {
       "id": "16",
@@ -2124,7 +2649,7 @@
           "size": "2MB"
         }
       ],
-      "evalutate": {}
+      "evaluate": []
     },
     {
       "id": "17",
@@ -2183,10 +2708,64 @@
           "size": "2MB"
         }
       ],
-      "evalutate": {}
+      "evaluate": []
     },
     {
       "id": "18",
+      "name": "Initialize environment for development",
+      "des": "Initialize environment for development use Reactjs",
+      "status": "In progress",
+      "start": "2023-07-12T17:30",
+      "end": "2023-07-14T17:30",
+      "priority": "high",
+      "tag": "project",
+      "workspace": "2",
+      "workspaceName": "UX UI Design",
+      "relatedUser": [
+        1,
+        3,
+        4
+      ],
+      "assignee": {
+        "id": 1,
+        "name": "Nguyen Tien Dat",
+        "email": "tiendat@gmail.com",
+        "avatar": "/assets/1.png"
+      },
+      "assessor": {
+        "id": 2,
+        "name": "Nguyen Duc Hoang",
+        "email": "hoangnd@gmail.com",
+        "avatar": "/assets/2.png"
+      },
+      "reminder": "false",
+      "checklist": [
+        {
+          "name": "Create Reactjs Project",
+          "checked": false
+        },
+        {
+          "name": "Create github repository",
+          "checked": false
+        },
+        {
+          "name": "Add team members to collaborator",
+          "checked": false
+        }
+      ],
+      "comments": [
+        "Add README file to describes and launches a project"
+      ],
+      "attachment": [
+        {
+          "name": "guideline.pdf",
+          "size": "2MB"
+        }
+      ],
+      "evaluate": []
+    },
+    {
+      "id": "19",
       "name": "Create figma projct and import plugin",
       "des": "Set up Figma and install necessary plugins for design",
       "status": "Open",
@@ -2238,10 +2817,10 @@
           "size": "2MB"
         }
       ],
-      "evalutate": {}
+      "evaluate": []
     },
     {
-      "id": "19",
+      "id": "20",
       "name": "Create user persona",
       "des": "Create user personas to understand and represent the target users effectively",
       "status": "In progress",
@@ -2289,10 +2868,212 @@
           "size": "2MB"
         }
       ],
-      "evalutate": {}
+      "evaluate": []
     },
     {
-      "id": "20",
+      "id": "21",
+      "name": "Create user requirements collection document",
+      "des": "Create user requirements collection document",
+      "status": "In progress",
+      "start": "2023-07-31T17:30",
+      "end": "2023-08-02T17:30",
+      "priority": "high",
+      "tag": "project",
+      "workspace": "2",
+      "workspaceName": "UX UI Design",
+      "relatedUser": [
+        1,
+        3,
+        4
+      ],
+      "assignee": {
+        "id": 1,
+        "name": "Nguyen Tien Dat",
+        "email": "tiendat@gmail.com",
+        "avatar": "/assets/1.png"
+      },
+      "assessor": {
+        "id": 2,
+        "name": "Nguyen Duc Hoang",
+        "email": "hoangnd@gmail.com",
+        "avatar": "/assets/2.png"
+      },
+      "reminder": "false",
+      "checklist": [
+        {
+          "name": "Create user requirements form",
+          "checked": false
+        },
+        {
+          "name": "User requirements specification document",
+          "checked": false
+        }
+      ],
+      "comments": [
+        "Consider demographics, motivations, and behaviors when creating user personas",
+        "Use qualitative and quantitative research methods to gather data for personas"
+      ],
+      "attachment": [
+        {
+          "name": "guideline.pdf",
+          "size": "2MB"
+        }
+      ],
+      "evaluate": []
+    },
+    {
+      "id": "22",
+      "name": "Create user stories document",
+      "des": "Create user stories document include 3 roles: student, worker, manager",
+      "status": "In progress",
+      "start": "2023-08-04T17:30",
+      "end": "2023-08-05T17:30",
+      "priority": "high",
+      "tag": "project",
+      "workspace": "2",
+      "workspaceName": "UX UI Design",
+      "relatedUser": [
+        1,
+        3,
+        4
+      ],
+      "assignee": {
+        "id": 1,
+        "name": "Nguyen Tien Dat",
+        "email": "tiendat@gmail.com",
+        "avatar": "/assets/1.png"
+      },
+      "assessor": {
+        "id": 2,
+        "name": "Nguyen Duc Hoang",
+        "email": "hoangnd@gmail.com",
+        "avatar": "/assets/2.png"
+      },
+      "reminder": "false",
+      "checklist": [
+        {
+          "name": "Create user stories document for student",
+          "checked": false
+        },
+        {
+          "name": "Create user stories document for worker",
+          "checked": false
+        },
+        {
+          "name": "Create user stories document for manager",
+          "checked": false
+        }
+      ],
+      "comments": [
+        "Consider demographics, motivations, and behaviors when creating user personas",
+        "Use qualitative and quantitative research methods to gather data for personas"
+      ],
+      "attachment": [
+        {
+          "name": "guideline.pdf",
+          "size": "2MB"
+        }
+      ],
+      "evaluate": []
+    },
+    {
+      "id": "23",
+      "name": "Create empathy map",
+      "des": "Create empathy map",
+      "status": "In progress",
+      "start": "2023-08-06T17:30",
+      "end": "2023-08-08T17:30",
+      "priority": "high",
+      "tag": "project",
+      "workspace": "2",
+      "workspaceName": "UX UI Design",
+      "relatedUser": [
+        1,
+        3,
+        4
+      ],
+      "assignee": {
+        "id": 1,
+        "name": "Nguyen Tien Dat",
+        "email": "tiendat@gmail.com",
+        "avatar": "/assets/1.png"
+      },
+      "assessor": {
+        "id": 2,
+        "name": "Nguyen Duc Hoang",
+        "email": "hoangnd@gmail.com",
+        "avatar": "/assets/2.png"
+      },
+      "reminder": "false",
+      "checklist": [],
+      "comments": [
+        "Consider demographics, motivations, and behaviors when creating user personas",
+        "Use qualitative and quantitative research methods to gather data for personas"
+      ],
+      "attachment": [
+        {
+          "name": "guideline.pdf",
+          "size": "2MB"
+        }
+      ],
+      "evaluate": []
+    },
+    {
+      "id": "24",
+      "name": "Create sitemaps",
+      "des": "Create sitemaps on figma",
+      "status": "In progress",
+      "start": "2023-08-04T17:30",
+      "end": "2023-08-05T17:30",
+      "priority": "high",
+      "tag": "project",
+      "workspace": "2",
+      "workspaceName": "UX UI Design",
+      "relatedUser": [
+        1,
+        3,
+        4
+      ],
+      "assignee": {
+        "id": 1,
+        "name": "Nguyen Tien Dat",
+        "email": "tiendat@gmail.com",
+        "avatar": "/assets/1.png"
+      },
+      "assessor": {
+        "id": 2,
+        "name": "Nguyen Duc Hoang",
+        "email": "hoangnd@gmail.com",
+        "avatar": "/assets/2.png"
+      },
+      "reminder": "false",
+      "checklist": [
+        {
+          "name": "Create sitemaps for personal screens",
+          "checked": false
+        },
+        {
+          "name": "Create sitemaps for workspace screens",
+          "checked": false
+        },
+        {
+          "name": "Create sitemaps for authentication screens",
+          "checked": false
+        }
+      ],
+      "comments": [
+        "Workspace should has sub navbar"
+      ],
+      "attachment": [
+        {
+          "name": "guideline.pdf",
+          "size": "2MB"
+        }
+      ],
+      "evaluate": []
+    },
+    {
+      "id": "25",
       "name": "Write Website Specification",
       "des": "Create a comprehensive specification document",
       "status": "Close",
@@ -2308,8 +3089,8 @@
         3
       ],
       "assignee": {
-        "id": 2,
-        "name": "Nguyen Duc Hoang",
+        "id": 4,
+        "name": "Pham Xuan Duy",
         "email": "tiendat@gmail.com",
         "avatar": "/assets/1.png"
       },
@@ -2350,13 +3131,10 @@
           "time": "2 days ago"
         }
       ],
-      "evaluate": {
-        "content": "Did exactly as requested but still some errors",
-        "point": "60"
-      }
+      "evaluate": []
     },
     {
-      "id": "21",
+      "id": "26",
       "name": "Create migration",
       "des": "Generate and implement database migration",
       "status": "Resolve",
@@ -2416,16 +3194,34 @@
           "time": "2 days ago"
         }
       ],
-      "evalutate": {
-        "content": "",
-        "point": "100"
-      }
+      "evaluate": [
+        {
+          "name": "Design the user authentication process",
+          "checked": true,
+          "feedback": "Done"
+        },
+        {
+          "name": "Implement user registration and login functionality",
+          "checked": true,
+          "feedback": "Done"
+        },
+        {
+          "name": "Set up user roles and permissions",
+          "checked": true,
+          "feedback": "Done"
+        },
+        {
+          "name": "Implement access control mechanisms",
+          "checked": false,
+          "feedback": "No exacly"
+        }
+      ]
     },
     {
-      "id": "22",
+      "id": "27",
       "name": "Implement authentication and authorization",
       "des": "Develop and integrate the authentication and authorization mechanisms to secure the system.",
-      "status": "In progress",
+      "status": "Close",
       "start": "2023-06-30T08:00",
       "end": "2023-07-03T17:00",
       "priority": "normal",
@@ -2437,13 +3233,13 @@
         3,
         4
       ],
-      "assignee": {
+      "assessor": {
         "id": 2,
         "name": "Nguyen Duc Hoang",
         "email": "hoangnd@gmail.com",
         "avatar": "/assets/2.png"
       },
-      "assessor": {
+      "assignee": {
         "id": 3,
         "name": "Hoang The Anh",
         "email": "anhnd@gmail.com",
@@ -2462,18 +3258,6 @@
         {
           "name": "Set up user roles and permissions",
           "checked": true
-        },
-        {
-          "name": "Implement access control mechanisms",
-          "checked": false
-        },
-        {
-          "name": "Integrate authentication with external identity providers",
-          "checked": false
-        },
-        {
-          "name": "Implement session management and logout functionality",
-          "checked": false
         }
       ],
       "comments": [
@@ -2488,10 +3272,25 @@
           "size": "3MB  "
         }
       ],
-      "evalutate": {}
+      "evaluate": [
+        {
+          "name": "Design the user authentication process",
+          "checked": true
+        },
+        {
+          "name": "Implement user registration and login functionality",
+          "checked": true,
+          "feedback": "Done"
+        },
+        {
+          "name": "Set up user roles and permissions",
+          "checked": true,
+          "feedback": "Done"
+        }
+      ]
     },
     {
-      "id": "23",
+      "id": "28",
       "name": "Write unit test",
       "des": "Develop and implement unit tests to verify the functionality",
       "start": "2023-06-30T08:30",
@@ -2541,10 +3340,10 @@
           "size": "10.4MB"
         }
       ],
-      "evalutate": {}
+      "evaluate": []
     },
     {
-      "id": "24",
+      "id": "29",
       "name": "Deploy Config Servers for Production Deployments",
       "des": "Set up and configure the necessary configuration servers to support production ",
       "start": "2023-07-06T00:00",
@@ -2606,11 +3405,11 @@
           "size": "3MB  "
         }
       ],
-      "evalutate": {}
+      "evaluate": []
     },
     {
-      "id": "25",
-      "name": "Write Website Specification",
+      "id": "30",
+      "name": "Change Website Specification after feedback",
       "des": "Create a comprehensive specification document",
       "status": "Open",
       "start": "2023-07-05T08:30",
@@ -2667,10 +3466,10 @@
           "size": "5MB"
         }
       ],
-      "evalutate": {}
+      "evaluate": []
     },
     {
-      "id": "26",
+      "id": "31",
       "name": "Build homepage UI and match API",
       "des": "Create homepage follows the design and match API",
       "status": "In progress",
@@ -2728,10 +3527,10 @@
           "size": "2MB"
         }
       ],
-      "evalutate": {}
+      "evaluate": []
     },
     {
-      "id": "27",
+      "id": "32",
       "name": "Build Login page UI and match API",
       "des": "Create Login follows the design and match API",
       "status": "Open",
@@ -2789,10 +3588,10 @@
           "size": "2MB"
         }
       ],
-      "evalutate": {}
+      "evaluate": []
     },
     {
-      "id": "28",
+      "id": "33",
       "name": "Create API resource for product management",
       "des": "Create API resource for product management",
       "status": "Open",
@@ -2854,7 +3653,266 @@
           "size": "2MB"
         }
       ],
-      "evalutate": {}
+      "evaluate": []
+    }
+  ],
+  "freeTimes": [
+    {
+      "id": "171",
+      "name": "",
+      "des": "Create a visual design for the website interface using the Figma design tool",
+      "status": "Open",
+      "start": "2023-07-07T17:30",
+      "end": "2023-07-10T17:30",
+      "priority": "low",
+      "tag": "project",
+      "workspace": "2",
+      "workspaceName": "UX UI Design",
+      "assessor": {
+        "id": 1,
+        "name": "Nguyen Tien Dat",
+        "email": "tiendat@gmail.com",
+        "avatar": "/assets/1.png"
+      },
+      "assignee": {
+        "id": 2,
+        "name": "Nguyen Duc Hoang",
+        "email": "hoangnd@gmail.com",
+        "avatar": "/assets/2.png"
+      }
+    },
+    {
+      "id": "181",
+      "name": "",
+      "des": "Initialize environment for development use Reactjs",
+      "status": "In progress",
+      "start": "2023-07-12T17:30",
+      "end": "2023-07-14T17:30",
+      "priority": "high",
+      "tag": "project",
+      "workspace": "2",
+      "workspaceName": "UX UI Design",
+      "assessor": {
+        "id": 1,
+        "name": "Nguyen Tien Dat",
+        "email": "tiendat@gmail.com",
+        "avatar": "/assets/1.png"
+      },
+      "assignee": {
+        "id": 2,
+        "name": "Nguyen Duc Hoang",
+        "email": "hoangnd@gmail.com",
+        "avatar": "/assets/2.png"
+      },
+      "reminder": "false"
+    },
+    {
+      "id": "191",
+      "name": "",
+      "des": "Set up Figma and install necessary plugins for design",
+      "status": "Open",
+      "start": "2023-07-08T17:30",
+      "end": "2023-07-09T17:30",
+      "priority": "low",
+      "tag": "project",
+      "workspace": "2",
+      "workspaceName": "UX UI Design",
+      "relatedUser": [
+        1,
+        3,
+        4
+      ],
+      "assessor": {
+        "id": 1,
+        "name": "Nguyen Tien Dat",
+        "email": "tiendat@gmail.com",
+        "avatar": "/assets/1.png"
+      },
+      "assignee": {
+        "id": 3,
+        "name": "Hoang The Anh",
+        "email": "hoangnd@gmail.com",
+        "avatar": "/assets/2.png"
+      },
+      "reminder": "false"
+    },
+    {
+      "id": "201",
+      "name": "",
+      "des": "Create user personas to understand and represent the target users effectively",
+      "status": "In progress",
+      "start": "2023-06-30T17:30",
+      "end": "2023-07-01T17:30",
+      "priority": "high",
+      "tag": "project",
+      "workspace": "2",
+      "workspaceName": "UX UI Design",
+      "relatedUser": [
+        1,
+        3,
+        4
+      ],
+      "assessor": {
+        "id": 1,
+        "name": "Nguyen Tien Dat",
+        "email": "tiendat@gmail.com",
+        "avatar": "/assets/1.png"
+      },
+      "assignee": {
+        "id": 3,
+        "name": "Hoang The Anh",
+        "email": "hoangnd@gmail.com",
+        "avatar": "/assets/2.png"
+      }
+    },
+    {
+      "id": "211",
+      "name": "",
+      "des": "Create user requirements collection document",
+      "status": "In progress",
+      "start": "2023-07-31T17:30",
+      "end": "2023-08-02T17:30",
+      "priority": "high",
+      "tag": "project",
+      "workspace": "2",
+      "workspaceName": "UX UI Design",
+      "relatedUser": [
+        1,
+        3,
+        4
+      ],
+      "assessor": {
+        "id": 1,
+        "name": "Nguyen Tien Dat",
+        "email": "tiendat@gmail.com",
+        "avatar": "/assets/1.png"
+      },
+      "assignee": {
+        "id": 4,
+        "name": "Pham Xuan Duy",
+        "email": "hoangnd@gmail.com",
+        "avatar": "/assets/2.png"
+      },
+      "reminder": "false"
+    },
+    {
+      "id": "221",
+      "name": "",
+      "des": "Create user stories document include 3 roles: student, worker, manager",
+      "status": "In progress",
+      "start": "2023-08-04T17:30",
+      "end": "2023-08-05T17:30",
+      "priority": "high",
+      "tag": "project",
+      "workspace": "2",
+      "workspaceName": "UX UI Design",
+      "relatedUser": [
+        1,
+        3,
+        4
+      ],
+      "assessor": {
+        "id": 1,
+        "name": "Nguyen Tien Dat",
+        "email": "tiendat@gmail.com",
+        "avatar": "/assets/1.png"
+      },
+      "assignee": {
+        "id": 4,
+        "name": "Pham Xuan Duy",
+        "email": "hoangnd@gmail.com",
+        "avatar": "/assets/2.png"
+      },
+      "reminder": "false"
+    },
+    {
+      "id": "231",
+      "name": "",
+      "des": "Create empathy map",
+      "status": "In progress",
+      "start": "2023-08-06T17:30",
+      "end": "2023-08-08T17:30",
+      "priority": "high",
+      "tag": "project",
+      "workspace": "2",
+      "workspaceName": "UX UI Design",
+      "relatedUser": [
+        1,
+        3,
+        4
+      ],
+      "assessor": {
+        "id": 1,
+        "name": "Nguyen Tien Dat",
+        "email": "tiendat@gmail.com",
+        "avatar": "/assets/1.png"
+      },
+      "assignee": {
+        "id": 2,
+        "name": "Nguyen Duc Hoang",
+        "email": "hoangnd@gmail.com",
+        "avatar": "/assets/2.png"
+      }
+    },
+    {
+      "id": "241",
+      "name": "",
+      "des": "Create sitemaps on figma",
+      "status": "In progress",
+      "start": "2023-08-04T17:30",
+      "end": "2023-08-05T17:30",
+      "priority": "high",
+      "tag": "project",
+      "workspace": "2",
+      "workspaceName": "UX UI Design",
+      "relatedUser": [
+        1,
+        3,
+        4
+      ],
+      "assessor": {
+        "id": 1,
+        "name": "Nguyen Tien Dat",
+        "email": "tiendat@gmail.com",
+        "avatar": "/assets/1.png"
+      },
+      "assignee": {
+        "id": 2,
+        "name": "Nguyen Duc Hoang",
+        "email": "hoangnd@gmail.com",
+        "avatar": "/assets/2.png"
+      },
+      "reminder": "false"
+    },
+    {
+      "id": "251",
+      "name": "",
+      "des": "Create sitemaps on figma",
+      "status": "In progress",
+      "start": "2023-07-05T17:30",
+      "end": "2023-07-06T17:30",
+      "priority": "high",
+      "tag": "project",
+      "workspace": "2",
+      "workspaceName": "UX UI Design",
+      "relatedUser": [
+        1,
+        3,
+        4
+      ],
+      "assessor": {
+        "id": 1,
+        "name": "Nguyen Tien Dat",
+        "email": "tiendat@gmail.com",
+        "avatar": "/assets/1.png"
+      },
+      "assignee": {
+        "id": 4,
+        "name": "Pham Xuan Duy",
+        "email": "hoangnd@gmail.com",
+        "avatar": "/assets/2.png"
+      },
+      "reminder": "false"
     }
   ]
 }

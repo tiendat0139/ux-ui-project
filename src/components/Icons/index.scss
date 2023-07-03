@@ -16,6 +16,11 @@
   -webkit-mask-image: url("../../assets/img/search.svg");
   mask-image: url("../../assets/img/search.svg");
 }
+#alarm {
+  @include css-mask;
+  -webkit-mask-image: url("../../assets/img/alarm.svg");
+  mask-image: url("../../assets/img/alarm.svg");
+}
 #command {
   @include css-mask;
   -webkit-mask-image: url("../../assets/img/command.svg");

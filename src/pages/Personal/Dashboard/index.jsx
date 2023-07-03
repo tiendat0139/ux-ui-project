@@ -60,7 +60,7 @@ const Dashboard = () => {
                 display="flex"
                 justifyContent="center"
               >
-                <DoughnutChart values={[1, 2, 3, 4]} />
+                <DoughnutChart values={[5,4,3,2,1]} />
               </Box>
             </Box>
           </Grid>

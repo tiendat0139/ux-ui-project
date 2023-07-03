@@ -61,7 +61,26 @@ const Notification = () => {
           >
             Notifications
           </Typography>
-          <NotificationItem />
+          <NotificationItem
+            member="Nguyen Duc Hoang"
+            title="assigned you a task IT-10"
+            time="Just now"
+            ws="ITSS Project"
+            read={false}
+          />
+          <NotificationItem
+            member="Hoang The Anh"
+            memberId={2}
+            title="has evaluated your task IT-12"
+            time="2 hours ago"
+            ws="ITSS Project"
+          />
+          <NotificationItem
+            member="Nguyen Duc Hoang"
+            title="ask you to do IT-11 again"
+            time="3 hours ago"
+            ws="ITSS Project"
+          />
         </Box>
       </Popover>
     </Box>

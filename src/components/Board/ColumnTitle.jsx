@@ -29,6 +29,7 @@ const ColumnTitle = ({ title, number }) => {
             fontSize: "1.1rem",
             backgroundColor: alpha("#000", 0.1),
             borderRadius: "1.2rem",
+            fontFamily: "Outfit"
           }}
         >
           {number}

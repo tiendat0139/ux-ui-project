@@ -9,14 +9,15 @@ const DoughnutChart = ({ values }) => {
   const { palette } = useTheme();
 
   const data = {
-    labels: ["Another", "Part-time", "Learning", "Project"],
+    labels: ["Project", "School" ,"Part-time" ,"Sport", "Another"],
     datasets: [
       {
         label: "Percent complete",
         data: [...values],
-        backgroundColor: ["#FECF16", "#4185C6", "#104C9C", "#5DBCA4"],
-        borderColor: ["#FECF16", "#4185C6", "#104C9C", "#5DBCA4"],
+        backgroundColor: ["#4185C6", "#1aa8e9", "#104C9C", "#5DBCA4", "#FECF16"],
+        borderColor:  ["#4185C6", "#1aa8e9", "#104C9C", "#5DBCA4", "#FECF16"],
         borderWidth: 1,
+        rotation: 144,
       },
     ],
   };
@@ -41,7 +42,6 @@ const DoughnutChart = ({ values }) => {
         }
       },
     },
-    
   };
   return <Doughnut data={data} options={options} />;
 };

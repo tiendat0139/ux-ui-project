@@ -34,7 +34,7 @@ const TaskList = ({ title, list }) => {
   useEffect(() => {
     let newList;
     if (title === "Overdue") newList = list.slice(0, 3);
-    else newList = list.slice(0, 2);
+    else newList = list.slice(0, 3);
     setSlicedList(newList);
   }, [title, list]);
 
