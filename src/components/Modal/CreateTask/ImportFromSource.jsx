@@ -70,7 +70,7 @@ const ImportFromSource = ({ setOpenModal }) => {
 
   const handleSubmit = async () => {
     const data = { ...taskInfo, attachment: fileUpload, checkList: checkList };
-    const res = await fetch("https://workmate.onrender.com/", {
+    const res = await fetch("https://workmate.onrender.com/tasks", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
