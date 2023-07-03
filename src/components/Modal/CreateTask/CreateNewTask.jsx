@@ -57,7 +57,7 @@ const CreateNewTask = ({ setOpenModal }) => {
 
   const handleSubmit = async () => {
     const data = { ...taskInfo, attachment: fileUpload, checkList: checkList };
-    const res = await fetch(" http://localhost:3000/tasks", {
+    const res = await fetch("https://workmate.onrender.com/tasks", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -72,7 +72,7 @@ const CreateNewTask = ({ setOpenModal }) => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const res = await fetch("http://localhost:3000/workspaces");
+      const res = await fetch("https://workmate.onrender.com/workspaces");
       const data = await res.json();
       setWorkspaces([data[0], data[2]]);
     };

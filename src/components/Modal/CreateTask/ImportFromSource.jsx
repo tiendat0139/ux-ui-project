@@ -46,7 +46,7 @@ const ImportFromSource = ({ setOpenModal }) => {
 
   const handleChangeSource = async (e) => {
     setSource(e.target.value);
-    const res = await fetch(`http://localhost:3000/sources/${e.target.value}`);
+    const res = await fetch(`https://workmate.onrender.com/${e.target.value}`);
     const data = await res.json();
     setTasks(data.tasks);
   };

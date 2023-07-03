@@ -26,7 +26,7 @@ const Resource = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const res = await fetch(`http://localhost:3000/workspaces/${id}`);
+      const res = await fetch(`https://workmate.onrender.com/workspaces/${id}`);
       const data = await res.json();
       const newFormat = data.tasks.map((item) => {
         return {
@@ -47,7 +47,7 @@ const Resource = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const res = await fetch("http://localhost:3000/workspaces/1");
+      const res = await fetch("https://workmate.onrender.com/workspaces/1");
       const data = await res.json();
       setMembers(data.members);
     };
@@ -56,7 +56,9 @@ const Resource = () => {
 
   const handleShareTime = async () => {
     if (!shared) {
-      const res = await fetch("http://localhost:3000/tasks?workspace=2");
+      const res = await fetch(
+        "https://workmate.onrender.com/tasks?assignee.id=1&workspace=2"
+      );
       const data = await res.json();
       const newFormat = data.map((item) => {
         return {

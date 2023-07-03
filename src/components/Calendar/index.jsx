@@ -65,7 +65,7 @@ const DayView = () => {
 
   useEffect(() => {
     const getData = async () => {
-      const res = await fetch("http://localhost:3000/tasks?assignee.id=1");
+      const res = await fetch("https://workmate.onrender.com/tasks?assignee.id=1");
       const tasks = await res.json();
       const newTasks = await reFormatTasks(tasks);
       setEvents(newTasks);

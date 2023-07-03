@@ -53,7 +53,7 @@ const WorkspaceHeader = ({ setPageTitle }) => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const res = await fetch(`http://localhost:3000/workspaces/${id}`);
+      const res = await fetch(`https://workmate.onrender.com/workspaces/${id}`);
       const data = await res.json();
       setWorkspaceInfo({name: data.name, avatar: data.avatar});
     }

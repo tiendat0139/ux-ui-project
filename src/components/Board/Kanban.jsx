@@ -27,7 +27,7 @@ const Kanban = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const res = await fetch("http://localhost:3000/tasks?assignee.id=1&_sort=start&_order=asc");
+      const res = await fetch("https://workmate.onrender.com/tasks?assignee.id=1&_sort=start&_order=asc");
       const data = await res.json();
       const tasks = data
       const open = tasks.filter(task => task.status === "Open")

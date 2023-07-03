@@ -115,7 +115,6 @@ const List = () => {
                     <Box
                       sx={{
                         width: "10rem",
-                        py: "0.1rem",
                         bgcolor: getStatusColor(row.status)[0],
                         color: getStatusColor(row.status)[1],
                         fontWeight: 500,

@@ -32,7 +32,7 @@ const AuthForm = ({ type }) => {
     setLoginInfo({ ...loginInfo, [e.target.name]: e.target.value });
   };
   const handleSubmit = () => {
-    fetch(` http://localhost:3000/users?email=${loginInfo.email}`)
+    fetch(`https://workmate.onrender.com/users?email=${loginInfo.email}`)
       .then((res) => {
         return res.json();
       })

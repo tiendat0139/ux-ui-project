@@ -63,7 +63,7 @@ const ListTask = () => {
   useEffect(() => {
     const fetchData = async () => {
       const res = await fetch(
-        `http://localhost:3000/tasks?workspace=${id}&&_page=${page}&_limit=5`
+        `https://workmate.onrender.com/tasks?workspace=${id}&&_page=${page}&_limit=5`
       );
       const data = await res.json();
       setRows(data);

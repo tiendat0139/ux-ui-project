@@ -3,9 +3,11 @@ import { DragDropContext, Draggable, Droppable } from "@hello-pangea/dnd";
 import { Box, useTheme } from "@mui/material";
 import ColumnTitle from "./ColumnTitle";
 import WorkspaceTaskCard from "./WorkspaceTaskCard";
+import { useParams } from "react-router-dom";
 
 const WorkspaceKanban = () => {
   const { palette } = useTheme();
+  let {id} = useParams();
 
   const [columns, setColumns] = useState({
     0: {
@@ -28,7 +30,7 @@ const WorkspaceKanban = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const res = await fetch("http://localhost:3000/workspaces/1");
+      const res = await fetch(`https://workmate.onrender.com/workspaces/${id}`);
       const data = await res.json();
       const tasks = data.tasks
       const open = tasks.filter(task => task.status === "Open")
