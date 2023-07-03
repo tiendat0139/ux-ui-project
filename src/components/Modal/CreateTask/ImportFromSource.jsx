@@ -85,7 +85,7 @@ const ImportFromSource = ({ setOpenModal }) => {
 
   useEffect(() => {
     const fetchSources = async () => {
-      const res = await fetch(" https://workmate.onrender.com//sources");
+      const res = await fetch(" https://workmate.onrender.com/sources");
       const data = await res.json();
       setSources(data);
     };
