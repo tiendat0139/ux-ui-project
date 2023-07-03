@@ -136,7 +136,7 @@ const TaskDetailModal = ({ taskId = 1, open, setOpen }) => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const res = await fetch(`http://localhost:3000/tasks/${taskId}`);
+      const res = await fetch(`https://workmate.onrender.com/tasks/${taskId}`);
       const data = await res.json();
       setTask(data);
       setFile(data.attachment);
@@ -510,7 +510,7 @@ const TaskDetailModal = ({ taskId = 1, open, setOpen }) => {
                       {tab === 3 && (
                         <Evaluate
                           editable={task.assessor?.id === 1}
-                          evaluate={task.evaluate}
+                          evaluate={task.evaluate? task.evaluate : []}
                           setOpen={setOpen}
                           checklist={task.checklist}
                         />

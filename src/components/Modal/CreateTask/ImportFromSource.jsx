@@ -70,7 +70,7 @@ const ImportFromSource = ({ setOpenModal }) => {
 
   const handleSubmit = async () => {
     const data = { ...taskInfo, attachment: fileUpload, checkList: checkList };
-    const res = await fetch(" http://localhost:3000/tasks", {
+    const res = await fetch("https://workmate.onrender.com/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -85,7 +85,7 @@ const ImportFromSource = ({ setOpenModal }) => {
 
   useEffect(() => {
     const fetchSources = async () => {
-      const res = await fetch(" http://localhost:3000/sources");
+      const res = await fetch(" https://workmate.onrender.com//sources");
       const data = await res.json();
       setSources(data);
     };
