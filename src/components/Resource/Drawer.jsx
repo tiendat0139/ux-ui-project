@@ -13,7 +13,7 @@ const Drawer = ({ open }) => {
   useEffect(() => {
     const fetchData = async () => {
       const res = await fetch(
-        `http://localhost:3000/tasks?workspace=${id}&assignee.id=0`
+        `https://workmate.onrender.com/tasks?workspace=${id}&assignee.id=0`
       );
       const data = await res.json();
       setTasks(data);
