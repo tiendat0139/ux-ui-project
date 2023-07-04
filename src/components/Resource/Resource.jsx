@@ -81,7 +81,8 @@ const Resource = () => {
     setTasks([
       ...tasks,
       (tasks[taskChange].assigneeId = newGroupOrder + 1),
-      (tasks[taskChange].end = tasks[taskChange].end - tasks[taskChange].start + dragTime),
+      (tasks[taskChange].end =
+        tasks[taskChange].end - tasks[taskChange].start + dragTime),
       (tasks[taskChange].start = dragTime),
     ]);
   };
@@ -97,7 +98,7 @@ const Resource = () => {
 
   const getMemberFreeTime = async () => {
     if (!shared) {
-      const res = await fetch("http://localhost:3000/freeTimes");
+      const res = await fetch("https://workmate.onrender.com/freeTimes");
       const data = await res.json();
       const newFormat = data.map((item) => {
         return {
