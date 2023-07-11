@@ -10,7 +10,7 @@ const TaskCard = ({ title, des, due, priority, workspaceId }) => {
   useEffect(() => {
     const fetchData = async () => {
       const res = await fetch(
-        `http://localhost:3000/workspaces/${workspaceId}`
+        `https://workmate.onrender.com/${workspaceId}`
       );
       const data = await res.json();
       setWorkspace(data);
