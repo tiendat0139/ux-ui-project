@@ -10,11 +10,15 @@ import {
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Icon from "../Icons";
 import PropTypes from "prop-types";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const EvaluateItem = ({ name, checked, feedback, editable }) => {
-  const [idchecked, setIsChecked] = useState(checked);
+  const [ischecked, setIsChecked] = useState(false);
   const [expanded, setExpanded] = useState(false);
+
+  useEffect(() => {
+    setIsChecked(checked)
+  }, [checked]);
 
   return (
     <Accordion
@@ -38,7 +42,7 @@ const EvaluateItem = ({ name, checked, feedback, editable }) => {
               <Icon name="checkbox-checked" size={24} color={"#00a640"} />
             }
             disabled={!editable}
-            checked={idchecked}
+            checked={ischecked}
             onChange={() => setIsChecked((prev) => !prev)}
           />
           <Box

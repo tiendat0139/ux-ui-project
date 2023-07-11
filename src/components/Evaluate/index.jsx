@@ -1,4 +1,4 @@
-import { Box, Button } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 import PropTypes from "prop-types";
 import { toast } from "react-toastify";
 import EvaluateItem from "./EvaluateItem";
@@ -24,7 +24,14 @@ const Evaluate = ({ editable, evaluate, setOpen }) => {
               checked={item.checked}
               feedback={item.feedback}
             />
-          ))}
+          ))} 
+        {
+          (evaluate.length == 0 && (
+            <Typography>
+              No evaluate due to the task being in an resolve status
+            </Typography>
+          ))
+        }
       </Box>
       {editable && (
         <Box display="flex" gap="2rem" justifyContent="end" sx={{ mt: "3rem" }}>
