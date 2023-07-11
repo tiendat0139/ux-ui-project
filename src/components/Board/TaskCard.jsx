@@ -10,13 +10,15 @@ const TaskCard = ({ title, des, due, priority, workspaceId }) => {
   useEffect(() => {
     const fetchData = async () => {
       const res = await fetch(
-        `https://workmate.onrender.com/${workspaceId}`
+        `https://workmate.onrender.com/workspaces/${workspaceId}`
       );
       const data = await res.json();
+      console.log(data)
       setWorkspace(data);
     };
     fetchData();
-  }, [workspaceId]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <Box
