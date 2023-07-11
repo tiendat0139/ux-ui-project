@@ -10,10 +10,14 @@ import Proptypes from "prop-types";
 import {NavigateNext} from "@mui/icons-material";
 import WorkspaceHeader from "./WorkspaceHeader";
 import { useState } from "react";
+import { useParams } from "react-router-dom";
 
 const PageHeader = ({ title, pageType }) => {
   const { palette } = useTheme();
   const [pageTitle, setPageTitle] = useState(title);
+
+  let {id} = useParams();
+
   return (
     <Box sx={{position: "fixed", top: 48, width: "100%"}}>
       <Breadcrumbs
@@ -43,7 +47,9 @@ const PageHeader = ({ title, pageType }) => {
             sx={{ cursor: "pointer", fontSize: "1.3rem", fontFamily: "Outfit", lineHeight: "2.56rem" }}
             fontWeight={500}
           >
-            ITSS Project
+            {id === "1" && "ITSS Project"}
+            {id === "2" && "UX UI Design"}
+            {id === "3" && "Software Engineering"}
           </Link>
         )}
         <Link
@@ -68,7 +74,6 @@ const PageHeader = ({ title, pageType }) => {
           {title}
         </Typography>
       )}
-
       {pageType === "workspace" && (
         <WorkspaceHeader workspaceName="UX UI Design" setPageTitle={setPageTitle}/>
       )}

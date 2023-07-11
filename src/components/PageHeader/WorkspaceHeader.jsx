@@ -13,6 +13,7 @@ import {
 } from "@mui/material";
 import PropTypes from "prop-types";
 import Icon from "../../components/Icons";
+import WorkspaceSetting from "../Modal/WorkspaceSetting";
 import avt1 from "../../assets/img/avatar/1.png";
 import avt2 from "../../assets/img/avatar/2.png";
 import avt3 from "../../assets/img/avatar/3.png";
@@ -23,6 +24,8 @@ import { useEffect } from "react";
 const WorkspaceHeader = ({ setPageTitle }) => {
   const { palette } = useTheme();
   const [tab, setTab] = useState("List");
+  const [openSetting, setOpenSetting] = useState(false);
+
   const [workspaceInfo, setWorkspaceInfo] = useState({
     name: "",
     avatar: ""
@@ -91,7 +94,7 @@ const WorkspaceHeader = ({ setPageTitle }) => {
           >
             <Icon name="add" size={11} color={palette.primary.main} />
           </IconButton>
-          <AvatarGroup>
+          <AvatarGroup onClick={() => setOpenSetting(true)} sx={{cursor: "pointer"}}>
             <Avatar sx={{ width: "3.6rem", height: "3.6rem" }} src={avt1} />
             <Avatar sx={{ width: "3.6rem", height: "3.6rem" }} src={avt2} />
             <Avatar sx={{ width: "3.6rem", height: "3.6rem" }} src={avt3} />
@@ -117,6 +120,7 @@ const WorkspaceHeader = ({ setPageTitle }) => {
           <Tab value="Gantt" label="Gantt" />
         </Tabs>
       </Box>
+      <WorkspaceSetting open={openSetting} setOpenModal={setOpenSetting} />
     </Box>
   );
 };

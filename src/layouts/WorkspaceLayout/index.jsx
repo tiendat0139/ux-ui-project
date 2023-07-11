@@ -3,8 +3,6 @@ import { workspaceRouter } from "../../routes";
 import PageHeader from "../../components/PageHeader";
 import { Box } from "@mui/material";
 
-// import TaskDetailModal from "../../components/Modal/TaskDetailModal";
-
 const WorkspaceLayout = () => {
   return (
     <Box>

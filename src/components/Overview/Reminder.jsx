@@ -7,8 +7,10 @@ import PropTypes from "prop-types";
 const Reminder = ({ list }) => {
   const { palette } = useTheme();
   const getTagColor = (tag) => {
-    if (tag === "Project") return "#85CDFD";
-    if (tag === "Learning") return "#DEFCF9";
+    if (tag === "school") return "#039be5";
+    if (tag === "project") return "#0070B1";
+    if (tag === "sport") return "#1AB877";
+    if (tag === "part time") return "#3f51b5";
   };
   const getWorkspaceAvatar = (workspace) => {
     if (workspace === "UX UX Design") return ws1;
@@ -25,7 +27,7 @@ const Reminder = ({ list }) => {
         p: "2rem",
       }}
     >
-      <Typography variant="h4" fontWeight={500} color={palette.text.light}>
+      <Typography variant="h4" fontWeight={500} color={palette.text.dark}>
         Reminder
       </Typography>
       {list.map((item, index) => (

@@ -49,7 +49,7 @@ const Filter = ({ setFiltered }) => {
 
     console.log(params);
     const res = await fetch(
-      `http://localhost:3000/tasks?workspace=${id}&&${
+      `https://workmate.onrender.com/tasks?workspace=${id}&&${
         params.assignee !== "-1" && `assignee.id=${params.assignee}&&`
       }${params.reviewer !== "-1" && `assessor.id=${params.reviewer}&&`}${
         params.status !== "-1" && `status=${params.status}`
