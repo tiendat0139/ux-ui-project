@@ -26,11 +26,11 @@ const TaskList = ({ title, list }) => {
   };
 
   const getTagColor = (tag) => {
-    if (tag === "project") return "#3f51b5";
-    if (tag === "learning") return "#1aa8e9";
-    if (tag == "sport") return "##1ab877";
+    if (tag === "school") return "#039be5";
+    if (tag === "project") return "#0070B1";
+    if (tag === "sport") return "#1AB877";
+    if (tag === "part time") return "#3f51b5";
   };
-
   useEffect(() => {
     let newList;
     if (title === "Overdue") newList = list.slice(0, 3);

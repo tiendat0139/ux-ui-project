@@ -6,11 +6,10 @@ import PropTypes from "prop-types";
 
 const Reminder = ({ list }) => {
   const { palette } = useTheme();
+  
   const getTagColor = (tag) => {
-    if (tag === "school") return "#039be5";
-    if (tag === "project") return "#0070B1";
-    if (tag === "sport") return "#1AB877";
-    if (tag === "part time") return "#3f51b5";
+    if (tag === "project") return "#85CDFD";
+    if (tag === "school") return "#DEFCF9";
   };
   const getWorkspaceAvatar = (workspace) => {
     if (workspace === "UX UX Design") return ws1;
