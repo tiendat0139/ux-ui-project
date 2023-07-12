@@ -17,7 +17,6 @@ import {
   FormControl,
 } from "@mui/material";
 
-import { VisibilityOutlined } from "@mui/icons-material";
 import google from "../../assets/img/google.svg";
 import microsoft from "../../assets/img/microsoft.svg";
 
@@ -41,17 +40,11 @@ const AuthForm = ({ type }) => {
   };
 
   const handleSubmit = () => {
-    fetch(`https://workmate.onrender.com/users?email=${loginInfo.email}`)
-      .then((res) => {
-        return res.json();
-      })
-      .then((resp) => {
-        if (resp[0].password === loginInfo.password) {
-          localStorage.setItem("userId", resp.id);
-          navigate("/");
-          toast.success("Login Success");
-        }
-      });
+    if(loginInfo.email === "tiendat@gmail.com" && loginInfo.password === "123456") {
+      localStorage.setItem("userId", 1);
+      navigate("/");
+      toast.success("Login Success");
+    }
   };
 
   return (
@@ -137,7 +130,6 @@ const AuthForm = ({ type }) => {
                       </IconButton>
                     </InputAdornment>
                   }
-                  label="Password"
                 />
               </FormControl>
               {type === "login" && (
