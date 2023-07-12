@@ -1,9 +1,10 @@
-import { Box, Button, Typography } from "@mui/material";
+import { Box, Button, Typography, useTheme } from "@mui/material";
 import PropTypes from "prop-types";
 import { toast } from "react-toastify";
 import EvaluateItem from "./EvaluateItem";
 
 const Evaluate = ({ editable, evaluate, setOpen }) => {
+  const {palette} = useTheme();
   const handleCloseTask = () => {
     if (editable) {
       toast.info("Close task successfully", { autoClose: 2000 });
@@ -27,8 +28,8 @@ const Evaluate = ({ editable, evaluate, setOpen }) => {
           ))} 
         {
           (evaluate.length == 0 && (
-            <Typography>
-              No evaluate due to the task being in an resolve status
+            <Typography variant="h5" textAlign="center" color={palette.text.light}>
+              No evaluate due to the task not being in resolve status
             </Typography>
           ))
         }
