@@ -36,7 +36,7 @@ const Evaluate = ({ editable, evaluate, setOpen }) => {
           </Typography>
         )}
       </Box>
-      {editable && evaluate.length == 0 && (
+      {editable && evaluate.length > 0 && (
         <Box display="flex" gap="2rem" justifyContent="end" sx={{ mt: "3rem" }}>
           <Button variant="outlined">Rework</Button>
           <Button variant="contained" onClick={handleCloseTask}>
