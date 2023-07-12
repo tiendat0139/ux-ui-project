@@ -10,6 +10,11 @@ import {
   alpha,
   Input,
   TextField,
+  InputLabel,
+  OutlinedInput,
+  InputAdornment,
+  IconButton,
+  FormControl,
 } from "@mui/material";
 
 import { VisibilityOutlined } from "@mui/icons-material";
@@ -19,6 +24,8 @@ import microsoft from "../../assets/img/microsoft.svg";
 import twitter from "../../assets/img/twitter.svg";
 import auth from "../../assets/img/auth.svg";
 import { toast } from "react-toastify";
+import Visibility from "@mui/icons-material/Visibility";
+import VisibilityOff from "@mui/icons-material/VisibilityOff";
 
 const AuthForm = ({ type }) => {
   const navigate = useNavigate();
@@ -27,10 +34,12 @@ const AuthForm = ({ type }) => {
     email: "",
     password: "",
   });
+  const [showPassword, setShowPassword] = useState(false);
 
   const handleLoginInput = (e) => {
     setLoginInfo({ ...loginInfo, [e.target.name]: e.target.value });
   };
+
   const handleSubmit = () => {
     fetch(`https://workmate.onrender.com/users?email=${loginInfo.email}`)
       .then((res) => {
@@ -93,7 +102,9 @@ const AuthForm = ({ type }) => {
           <Typography variant="h2" textAlign="center" fontWeight={500}>
             Welcome Back
           </Typography>
-          <form style={{display: "flex", flexDirection: "column", gap: "2rem"}}>
+          <form
+            style={{ display: "flex", flexDirection: "column", gap: "2rem" }}
+          >
             {type === "register" && (
               <Input name="name" type="text" label="Name" />
             )}
@@ -105,14 +116,30 @@ const AuthForm = ({ type }) => {
               onChange={(e) => handleLoginInput(e)}
             />
             <Box>
-              <TextField
-                fullWidth
-                name="password"
-                type="password"
-                label="Password"
-                onChange={(e) => handleLoginInput(e)}
-                icon={<VisibilityOutlined />}
-              />
+              <FormControl fullWidth variant="outlined">
+                <InputLabel htmlFor="outlined-adornment-password">
+                  Password
+                </InputLabel>
+                <OutlinedInput
+                  id="outlined-adornment-password"
+                  type={showPassword ? "text" : "password"}
+                  name="password"
+                  label="Password"
+                  onChange={(e) => handleLoginInput(e)}
+                  endAdornment={
+                    <InputAdornment position="end">
+                      <IconButton
+                        aria-label="toggle password visibility"
+                        onClick={() => setShowPassword((prev) => !prev)}
+                        edge="end"
+                      >
+                        {showPassword ? <VisibilityOff /> : <Visibility />}
+                      </IconButton>
+                    </InputAdornment>
+                  }
+                  label="Password"
+                />
+              </FormControl>
               {type === "login" && (
                 <Typography
                   variant="h6"
