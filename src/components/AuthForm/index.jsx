@@ -47,7 +47,7 @@ const AuthForm = ({ type }) => {
 
   return (
     <Box display="flex" fullWidth sx={{ height: "100vh" }}>
-      <form
+      <Box
         style={{
           backgroundColor: palette.primary.dark,
           flex: "1 1 50%",
@@ -69,7 +69,7 @@ const AuthForm = ({ type }) => {
             boxShadow: "1rem 1rem 2rem -2px rgba(0,0,0,0.1)",
           }}
         ></Box>
-      </form>
+      </Box>
       <Box
         sx={{ backgroundColor: palette.primary.light, flex: "1 1 50%" }}
         display="flex"
@@ -93,7 +93,7 @@ const AuthForm = ({ type }) => {
           <Typography variant="h2" textAlign="center" fontWeight={500}>
             Welcome Back
           </Typography>
-          <Box display="flex" flexDirection="column" gap="2rem">
+          <form style={{display: "flex", flexDirection: "column", gap: "2rem"}}>
             {type === "register" && (
               <Input name="name" type="text" label="Name" />
             )}
@@ -123,7 +123,7 @@ const AuthForm = ({ type }) => {
                 </Typography>
               )}
             </Box>
-          </Box>
+          </form>
           <Box display="flex" flexDirection="column" gap="2.5rem">
             <Box>
               <Button
