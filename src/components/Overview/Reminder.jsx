@@ -37,10 +37,11 @@ const Reminder = ({ list }) => {
             bgcolor: getTagColor(item.category),
             borderRadius: "1.2rem",
             width: "100%",
-            boxShadow: "-4px 4px 5px rgba(0,0,0,0.15)",
+            boxShadow: "0 4px 8px 0 rgba(0,0,0,0.2)",
             cursor: "pointer",
+            transition: "all .5s",
             "&:hover": {
-              transform: "translate(1px, -1px)",
+              boxShadow: "0 8px 32px 0 rgba(0,0,0,0.2)",
             },
           }}
         >

@@ -85,10 +85,11 @@ const TaskList = ({ title, list }) => {
               bgcolor: "#fff",
               p: "1rem 2rem",
               borderRadius: "1rem",
-              boxShadow: "-1px 1px 4px rgba(0,0,0,0.3)",
+              boxShadow: "0 4px 8px 0 rgba(0,0,0,0.2)",
               cursor: "pointer",
+              transition: "all .5s",
               "&:hover": {
-                transform: "translate(1px, -1px)",
+                boxShadow: "0 8px 32px 0 rgba(0,0,0,0.2)",
               },
             }}
           >
